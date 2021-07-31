@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:EnhancedForest/EnhancedForest.xcodeproj">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Vendor">
+      <FileRef
+         location = "group:Vendor/bgfx/bgfx.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>
