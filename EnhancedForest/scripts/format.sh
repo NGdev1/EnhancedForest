@@ -2,7 +2,7 @@
 
 if which clang-format >/dev/null; then
 
-foldersToExclude=(Vendor vendor)
+foldersToExclude=(Vendor vendor imgui)
 extensionsToProcess=(cpp hpp h)
 
 command="find . \( "

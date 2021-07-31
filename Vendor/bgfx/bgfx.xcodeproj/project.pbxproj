@@ -4792,6 +4792,7 @@
 		02051A68031349C089689BF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -4810,14 +4811,12 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CFLAGS = "    $(inherited)";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = tinyexr;
 				SECTORDER_FLAGS = "";
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -4850,7 +4849,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"-Wno-ignored-qualifiers",
@@ -4876,7 +4874,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = glslang;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -4885,6 +4882,7 @@
 		08E642A76AC34813A4E52FB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -4908,14 +4906,12 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = "   '-std=c++14' ";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = bx;
 				SECTORDER_FLAGS = "";
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -4924,6 +4920,7 @@
 		0CD0A307BED94FC28D2FBAF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -4941,13 +4938,11 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = "   '-std=c++14' ";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = pvrtc;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -4956,6 +4951,7 @@
 		0E1BAFAABDB9490E9AB49752 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -4974,7 +4970,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"$(inherited)",
@@ -4984,7 +4979,6 @@
 				PRODUCT_NAME = tinyexr;
 				SECTORDER_FLAGS = "";
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -4993,6 +4987,7 @@
 		11A039D492694938940E558A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -5010,13 +5005,11 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = "   '-std=c++14' ";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = squish;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5025,6 +5018,7 @@
 		155B1F9B1F5D4187AA622F9C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -5048,7 +5042,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"'-std=c++14'",
@@ -5057,7 +5050,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = etc2;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5066,6 +5058,7 @@
 		183F85F99C0E43F383AEDDD4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -5083,7 +5076,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"'-std=c++14'",
@@ -5092,7 +5084,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = squish;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5122,7 +5113,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fno-strict-aliasing",
@@ -5132,7 +5122,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = glcpp;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5141,6 +5130,7 @@
 		2456AC3C59534C578250F845 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -5169,7 +5159,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"'-std=c++14'",
@@ -5179,7 +5168,6 @@
 				PRODUCT_NAME = bgfx;
 				SECTORDER_FLAGS = "";
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5209,7 +5197,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"$(inherited)",
@@ -5218,7 +5205,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = fcpp;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5227,6 +5213,7 @@
 		3698573F65754C91B3C7C311 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -5256,7 +5243,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"'-std=c++14'",
@@ -5266,7 +5252,6 @@
 				PRODUCT_NAME = bimg;
 				SECTORDER_FLAGS = "";
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5296,7 +5281,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CFLAGS = (
 					"-fno-strict-aliasing",
 					"-Wno-implicit-fallthrough",
@@ -5321,7 +5305,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = "glsl-optimizer";
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5330,6 +5313,7 @@
 		3AB820C66BA24784B1AAF6D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -5349,7 +5333,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"'-std=c++14'",
@@ -5359,7 +5342,6 @@
 				PRODUCT_NAME = "astc-codec";
 				SECTORDER_FLAGS = "";
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5368,6 +5350,7 @@
 		3B05B7F4DBB2491C8F787D1E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -5385,7 +5368,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"'-std=c++14'",
@@ -5394,7 +5376,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = astc;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5403,6 +5384,7 @@
 		3D7AB411395D4D0681BF84CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -5420,14 +5402,12 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = "   '-std=c++14' ";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = meshoptimizer;
 				SECTORDER_FLAGS = "";
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5457,7 +5437,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CFLAGS = (
 					"-fno-strict-aliasing",
 					"$(inherited)",
@@ -5466,7 +5445,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = glcpp;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5496,13 +5474,11 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CFLAGS = "    $(inherited)";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = fcpp;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5532,7 +5508,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fno-strict-aliasing",
@@ -5559,7 +5534,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = "glsl-optimizer";
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5568,6 +5542,7 @@
 		4918E72A188A4ABDB2524955 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -5585,13 +5560,11 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CFLAGS = "    $(inherited)";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = iqa;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5624,7 +5597,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-Wno-ignored-qualifiers",
 					"-Wno-implicit-fallthrough",
@@ -5649,7 +5621,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = glslang;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5679,7 +5650,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"-Wno-switch",
@@ -5689,7 +5659,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = "spirv-tools";
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5699,10 +5668,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				OBJROOT = "${SRCROOT}/bin-int";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SYMROOT = "${SRCROOT}/bin";
 			};
 			name = Release;
@@ -5738,13 +5709,11 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = "   '-std=c++14' ";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = "example-common";
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5753,6 +5722,7 @@
 		635BB53B84F143BABE4B4FD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -5770,7 +5740,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"'-std=c++14'",
@@ -5780,7 +5749,6 @@
 				PRODUCT_NAME = meshoptimizer;
 				SECTORDER_FLAGS = "";
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5789,6 +5757,7 @@
 		6B0C956D33A54974BA37880E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -5818,7 +5787,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"'-std=c++14'",
 					"-g",
@@ -5828,7 +5796,6 @@
 				PRODUCT_NAME = bgfx;
 				SECTORDER_FLAGS = "";
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5837,6 +5804,7 @@
 		6D1C5D43AF1C499599FF27EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -5861,7 +5829,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"'-std=c++14'",
@@ -5870,7 +5837,7 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = "dear-imgui";
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5879,6 +5846,7 @@
 		76EC2D0726EE49F0A22779D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -5896,13 +5864,11 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = "   '-std=c++14' ";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = edtaa3;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5932,7 +5898,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-Wno-switch",
 					"'-std=c++14'",
@@ -5941,7 +5906,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = "spirv-tools";
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5950,6 +5914,7 @@
 		9DD589F5DA9340328EE1FC9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -5972,7 +5937,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"'-std=c++14'",
@@ -5982,7 +5946,6 @@
 				PRODUCT_NAME = bx;
 				SECTORDER_FLAGS = "";
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -5991,6 +5954,7 @@
 		A5E74C27FA4042C8996B6F8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -6008,7 +5972,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"'-std=c++14'",
@@ -6017,7 +5980,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = etc1;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -6026,6 +5988,7 @@
 		ABD5DEB992FD4C83AAFB9120 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -6050,13 +6013,12 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = "   '-std=c++14' ";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = "dear-imgui";
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -6086,7 +6048,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"-fno-strict-aliasing",
@@ -6096,7 +6057,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = mesa;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -6105,6 +6065,7 @@
 		C13983A8019D4352B37F4C7B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -6129,13 +6090,11 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = "   '-std=c++14' ";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = nvtt;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -6172,7 +6131,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"'-std=c++14'",
@@ -6181,7 +6139,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = "example-common";
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -6190,6 +6147,7 @@
 		D1A7EC86364641FAB2D83397 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -6207,7 +6165,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CFLAGS = (
 					"-DNDEBUG",
 					"$(inherited)",
@@ -6216,7 +6173,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = iqa;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -6226,10 +6182,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				OBJROOT = "${SRCROOT}/bin-int";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SYMROOT = "${SRCROOT}/bin";
 			};
 			name = Debug;
@@ -6237,6 +6195,7 @@
 		D5A0657E8736464D9322F36E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -6254,13 +6213,11 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = "   '-std=c++14' ";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = astc;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -6290,7 +6247,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CFLAGS = (
 					"-fno-strict-aliasing",
 					"$(inherited)",
@@ -6299,7 +6255,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = mesa;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -6308,6 +6263,7 @@
 		D9FB2B8498EF432DA06B19B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -6325,13 +6281,11 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = "   '-std=c++14' ";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = etc1;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -6340,6 +6294,7 @@
 		E1F2A4CC6909429B916D3998 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -6357,7 +6312,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"'-std=c++14'",
@@ -6366,7 +6320,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = edtaa3;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -6375,6 +6328,7 @@
 		E4AFEBE6151244F780952E5B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -6394,14 +6348,12 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = "   '-std=c++14' ";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = "astc-codec";
 				SECTORDER_FLAGS = "";
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -6410,6 +6362,7 @@
 		E99F2424A12645E5842013A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -6427,7 +6380,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"'-std=c++14'",
@@ -6436,7 +6388,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = pvrtc;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -6445,6 +6396,7 @@
 		E9FE40DFABC84BD983181713 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -6474,14 +6426,12 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = "   '-std=c++14' ";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = bimg;
 				SECTORDER_FLAGS = "";
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -6509,13 +6459,11 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = "   '-std=c++14' ";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = "spirv-cross";
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -6524,6 +6472,7 @@
 		F51693AC133444108E79E1FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -6547,13 +6496,11 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = "   '-std=c++14' ";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = etc2;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -6562,6 +6509,7 @@
 		F84B14FE4B154EE790134391 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				EXECUTABLE_SUFFIX = .a;
@@ -6586,7 +6534,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"'-std=c++14'",
@@ -6595,7 +6542,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = nvtt;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
@@ -6623,7 +6569,6 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OBJROOT = "${SRCROOT}/bin-int";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DNDEBUG",
 					"'-std=c++14'",
@@ -6632,7 +6577,6 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = "spirv-cross";
 				SECTORDER_FLAGS = "";
-				SYMROOT = "${SRCROOT}/bin";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};

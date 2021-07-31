@@ -12,6 +12,7 @@
 #include "common.h"
 #include "bgfx_utils.h"
 #include "logo.h"
+#include "imgui/imgui.h"
 
 class ExampleHelloWorld : public entry::AppI {
 public:
@@ -39,10 +40,12 @@ public:
 
         // Set view 0 clear state.
         bgfx::setViewClear(0, BGFX_CLEAR_COLOR | BGFX_CLEAR_DEPTH, 0x173343ff, 1.0f, 0);
+        imguiCreate();
     }
 
     virtual int shutdown() override {
         // Shutdown bgfx.
+        imguiDestroy();
         bgfx::shutdown();
 
         return 0;
@@ -50,6 +53,16 @@ public:
 
     bool update() override {
         if (!entry::processEvents(m_width, m_height, m_debug, m_reset, &m_mouseState)) {
+            imguiBeginFrame(m_mouseState.m_mx, m_mouseState.m_my,
+                (m_mouseState.m_buttons[entry::MouseButton::Left] ? IMGUI_MBUT_LEFT : 0) |
+                    (m_mouseState.m_buttons[entry::MouseButton::Right] ? IMGUI_MBUT_RIGHT : 0) |
+                    (m_mouseState.m_buttons[entry::MouseButton::Middle] ? IMGUI_MBUT_MIDDLE : 0),
+                m_mouseState.m_mz, uint16_t(m_width), uint16_t(m_height));
+
+            showExampleDialog(this);
+
+            imguiEndFrame();
+
             // Set view 0 default viewport.
             bgfx::setViewRect(0, 0, 0, uint16_t(m_width), uint16_t(m_height));
 
