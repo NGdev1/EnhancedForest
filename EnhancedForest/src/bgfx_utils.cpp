@@ -5,8 +5,6 @@
 //  Created by Admin on 31.07.2021.
 //
 
-#include "common.h"
-
 #include <tinystl/allocator.h>
 #include <tinystl/vector.h>
 #include <tinystl/string.h>
@@ -18,12 +16,11 @@ namespace stl = tinystl;
 #include <bx/math.h>
 #include <bx/readerwriter.h>
 #include <bx/string.h>
-#include "entry/entry.h"
 #include <meshoptimizer/src/meshoptimizer.h>
+#include <bimg/decode.h>
 
 #include "bgfx_utils.h"
-
-#include <bimg/decode.h>
+#include "entry.h"
 
 void *load(bx::FileReaderI *_reader, bx::AllocatorI *_allocator, const char *_filePath, uint32_t *_size) {
     if (bx::open(_reader, _filePath)) {

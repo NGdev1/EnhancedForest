@@ -35,8 +35,6 @@
 		841686F526B5F06900EB3BB9 /* libdear-imgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FF710D26B525A10048DE6C /* libdear-imgui.a */; };
 		841686F726B5F34A00EB3BB9 /* example-glue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 841686F626B5F34A00EB3BB9 /* example-glue.cpp */; };
 		841686F826B5F34A00EB3BB9 /* example-glue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 841686F626B5F34A00EB3BB9 /* example-glue.cpp */; };
-		841686FB26B5F37800EB3BB9 /* dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 841686F926B5F37800EB3BB9 /* dialog.cpp */; };
-		841686FC26B5F37800EB3BB9 /* dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 841686F926B5F37800EB3BB9 /* dialog.cpp */; };
 		841686FF26B5F6E800EB3BB9 /* libdear-imgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FF710D26B525A10048DE6C /* libdear-imgui.a */; };
 		8433F1D626B5D64B004DAF14 /* libbgfx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FF710726B525A10048DE6C /* libbgfx.a */; };
 		8433F1E126B5D7D0004DAF14 /* libbx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FF710B26B525A10048DE6C /* libbx.a */; };
@@ -48,6 +46,10 @@
 		8433F1F626B5EDDF004DAF14 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8433F1E526B5D8AC004DAF14 /* UIKit.framework */; };
 		8433F1F726B5EDE8004DAF14 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8433F1D726B5D71A004DAF14 /* Metal.framework */; };
 		8433F1F826B5EDF1004DAF14 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8433F1DB26B5D798004DAF14 /* OpenGLES.framework */; };
+		8444364226BB32640001F5A4 /* entry_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84120D0326B5313100B38B86 /* entry_osx.mm */; };
+		8444364326BB32680001F5A4 /* entry_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84120D8E26B5D1CB00B38B86 /* entry_ios.mm */; };
+		8444364626BBF4B90001F5A4 /* entry_windows.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8444364526BBF4B90001F5A4 /* entry_windows.cpp */; };
+		8444364726BBF4B90001F5A4 /* entry_windows.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8444364526BBF4B90001F5A4 /* entry_windows.cpp */; };
 		8453C5BA26B5D42C00B8B839 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8453C5B826B5D42900B8B839 /* LaunchScreen.storyboard */; };
 		845541DB26B5247500D18CC7 /* AssetsOSX.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845541D726B5247500D18CC7 /* AssetsOSX.xcassets */; };
 		845541DD26B5247500D18CC7 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 845541DA26B5247500D18CC7 /* Application.cpp */; };
@@ -355,7 +357,6 @@
 		841686DB26B5F04500EB3BB9 /* vs_imgui_image.sc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vs_imgui_image.sc; sourceTree = "<group>"; };
 		841686DC26B5F04500EB3BB9 /* varying.def.sc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = varying.def.sc; sourceTree = "<group>"; };
 		841686DD26B5F04600EB3BB9 /* imgui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui.cpp; sourceTree = "<group>"; };
-		841686DE26B5F04600EB3BB9 /* droidsans.ttf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = droidsans.ttf.h; sourceTree = "<group>"; };
 		841686DF26B5F04600EB3BB9 /* imgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui.h; sourceTree = "<group>"; };
 		841686E026B5F04600EB3BB9 /* vs_imgui_image.bin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vs_imgui_image.bin.h; sourceTree = "<group>"; };
 		841686E126B5F04600EB3BB9 /* vs_ocornut_imgui.sc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vs_ocornut_imgui.sc; sourceTree = "<group>"; };
@@ -363,20 +364,17 @@
 		841686E326B5F04600EB3BB9 /* fs_ocornut_imgui.bin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fs_ocornut_imgui.bin.h; sourceTree = "<group>"; };
 		841686E426B5F04600EB3BB9 /* roboto_regular.ttf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = roboto_regular.ttf.h; sourceTree = "<group>"; };
 		841686F626B5F34A00EB3BB9 /* example-glue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "example-glue.cpp"; sourceTree = "<group>"; };
-		841686F926B5F37800EB3BB9 /* dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dialog.cpp; sourceTree = "<group>"; };
-		841686FA26B5F37800EB3BB9 /* dialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dialog.h; sourceTree = "<group>"; };
 		8433F1D726B5D71A004DAF14 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/Metal.framework; sourceTree = DEVELOPER_DIR; };
 		8433F1D926B5D724004DAF14 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		8433F1DB26B5D798004DAF14 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
 		8433F1DD26B5D7A8004DAF14 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
 		8433F1E526B5D8AC004DAF14 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		8444364526BBF4B90001F5A4 /* entry_windows.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = entry_windows.cpp; sourceTree = "<group>"; };
 		8453C5B826B5D42900B8B839 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		845541D626B5247500D18CC7 /* EnhancedForest.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = EnhancedForest.entitlements; sourceTree = "<group>"; };
 		845541D726B5247500D18CC7 /* AssetsOSX.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AssetsOSX.xcassets; sourceTree = "<group>"; };
 		845541D826B5247500D18CC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845541DA26B5247500D18CC7 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
-		8492AEE226B528DB00D0B2EB /* logo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = logo.h; sourceTree = "<group>"; };
-		8492AEE326B5292F00D0B2EB /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		8492AEE526B5294200D0B2EB /* entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = entry.h; sourceTree = "<group>"; };
 		8492AEE626B5299300D0B2EB /* dbg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dbg.h; sourceTree = "<group>"; };
 		8492AEE726B529CC00D0B2EB /* bgfx_utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bgfx_utils.h; sourceTree = "<group>"; };
@@ -451,7 +449,6 @@
 		841686C226B5F01E00EB3BB9 /* imgui */ = {
 			isa = PBXGroup;
 			children = (
-				841686DE26B5F04600EB3BB9 /* droidsans.ttf.h */,
 				841686D726B5F04500EB3BB9 /* fs_imgui_image.bin.h */,
 				841686DA26B5F04500EB3BB9 /* fs_imgui_image.sc */,
 				841686E326B5F04600EB3BB9 /* fs_ocornut_imgui.bin.h */,
@@ -487,8 +484,6 @@
 				841686C226B5F01E00EB3BB9 /* imgui */,
 				8492AEE426B5293800D0B2EB /* entry */,
 				845541DA26B5247500D18CC7 /* Application.cpp */,
-				8492AEE226B528DB00D0B2EB /* logo.h */,
-				8492AEE326B5292F00D0B2EB /* common.h */,
 				8492AEEB26B52A3F00D0B2EB /* bgfx_utils.cpp */,
 				8492AEE726B529CC00D0B2EB /* bgfx_utils.h */,
 				8492AEE826B529FF00D0B2EB /* bounds.h */,
@@ -502,10 +497,9 @@
 		8492AEE426B5293800D0B2EB /* entry */ = {
 			isa = PBXGroup;
 			children = (
-				841686F926B5F37800EB3BB9 /* dialog.cpp */,
-				841686FA26B5F37800EB3BB9 /* dialog.h */,
 				84120D0326B5313100B38B86 /* entry_osx.mm */,
 				84120D8E26B5D1CB00B38B86 /* entry_ios.mm */,
+				8444364526BBF4B90001F5A4 /* entry_windows.cpp */,
 				8492AEE526B5294200D0B2EB /* entry.h */,
 				8492AEEE26B52C3B00D0B2EB /* entry.cpp */,
 				8492AEE626B5299300D0B2EB /* dbg.h */,
@@ -925,9 +919,10 @@
 				84120D9526B5D1E500B38B86 /* bgfx_utils.cpp in Sources */,
 				84120D9326B5D1DB00B38B86 /* entry.cpp in Sources */,
 				84120D9226B5D1DB00B38B86 /* cmd.cpp in Sources */,
-				841686FC26B5F37800EB3BB9 /* dialog.cpp in Sources */,
+				8444364726BBF4B90001F5A4 /* entry_windows.cpp in Sources */,
 				84120D9426B5D1E500B38B86 /* Application.cpp in Sources */,
 				84120D9126B5D1DB00B38B86 /* input.cpp in Sources */,
+				8444364226BB32640001F5A4 /* entry_osx.mm in Sources */,
 				84120D9626B5D1E500B38B86 /* bounds.cpp in Sources */,
 				841686F826B5F34A00EB3BB9 /* example-glue.cpp in Sources */,
 				84120D9026B5D1CF00B38B86 /* entry_ios.mm in Sources */,
@@ -939,10 +934,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8444364326BB32680001F5A4 /* entry_ios.mm in Sources */,
 				8492AEEF26B52C3B00D0B2EB /* entry.cpp in Sources */,
 				8492AEF326B52C8C00D0B2EB /* cmd.cpp in Sources */,
+				8444364626BBF4B90001F5A4 /* entry_windows.cpp in Sources */,
 				8492AEF626B52CD800D0B2EB /* input.cpp in Sources */,
-				841686FB26B5F37800EB3BB9 /* dialog.cpp in Sources */,
 				84120D0426B5313300B38B86 /* entry_osx.mm in Sources */,
 				8492AEEC26B52A3F00D0B2EB /* bgfx_utils.cpp in Sources */,
 				8492AEEA26B52A1B00D0B2EB /* bounds.cpp in Sources */,

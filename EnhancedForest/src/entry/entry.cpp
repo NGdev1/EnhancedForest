@@ -20,7 +20,7 @@
 #include "cmd.h"
 #include "input.h"
 
-extern "C" int32_t _main_(int32_t _argc, char **_argv);
+extern "C" int32_t startApp(int32_t _argc, char **_argv);
 
 namespace entry {
 static uint32_t s_debug = BGFX_DEBUG_NONE;
@@ -494,7 +494,7 @@ static void sortApps() {
 }
 
 int main(int _argc, const char *const *_argv) {
-    // DBG(BX_COMPILER_NAME " / " BX_CPU_NAME " / " BX_ARCH_NAME " / " BX_PLATFORM_NAME);
+    DBG(BX_COMPILER_NAME " / " BX_CPU_NAME " / " BX_ARCH_NAME " / " BX_PLATFORM_NAME);
 
     s_fileReader = BX_NEW(g_allocator, FileReader);
     s_fileWriter = BX_NEW(g_allocator, FileWriter);
@@ -514,6 +514,7 @@ int main(int _argc, const char *const *_argv) {
     char title[bx::kMaxFilePath];
     bx::strCopy(title, BX_COUNTOF(title), fp.getBaseName());
 
+    // toggleFullscreen(defaultWindow);
     setWindowSize(defaultWindow, ENTRY_DEFAULT_WIDTH, ENTRY_DEFAULT_HEIGHT);
 
     sortApps();
@@ -542,7 +543,7 @@ restart:
     int32_t result = bx::kExitSuccess;
     s_restartArgs[0] = '\0';
     if (0 == s_numApps) {
-        result = ::_main_(_argc, (char **)_argv);
+        result = ::startApp(_argc, (char **)_argv);
     } else {
         result = runApp(getCurrentApp(selected), _argc, _argv);
     }

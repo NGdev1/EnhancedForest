@@ -88,7 +88,9 @@ namespace entry
 
             MainThreadEntry* self = (MainThreadEntry*)_userData;
             uint32_t result = main(self->m_argc, self->m_argv);
-            [NSApp terminate:nil];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [NSApp terminate:nil];
+            });
             return result;
         }
     };
