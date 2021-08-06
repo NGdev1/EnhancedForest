@@ -9,13 +9,10 @@
 
 #include "entry_p.h"
 #include "input.h"
+#include "allocator/bxallocator.hpp"
 
 #include <bx/allocator.h>
 #include <bx/ringbuffer.h>
-#include <tinystl/string.h>
-#include <tinystl/allocator.h>
-#include <tinystl/unordered_map.h>
-namespace stl = tinystl;
 
 struct InputMouse {
     InputMouse()
@@ -170,8 +167,6 @@ struct Input {
         }
     }
 
-    typedef stl::unordered_map<stl::string, const InputBinding *> InputBindingMap;
-    InputBindingMap m_inputBindingsMap;
     InputKeyboard m_keyboard;
     InputMouse m_mouse;
     Gamepad m_gamepad[ENTRY_CONFIG_MAX_GAMEPADS];

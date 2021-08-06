@@ -21,8 +21,8 @@ class ExampleHelloWorld : public entry::AppI {
     uint32_t m_reset;
 
 public:
-    ExampleHelloWorld(const char *_name, const char *_description, const char *_url)
-        : entry::AppI(_name, _description, _url) {}
+    ExampleHelloWorld()
+        : entry::AppI() {}
 
     void init(int32_t _argc, const char *const *_argv, uint32_t _width, uint32_t _height) override {
         Args args(_argc, _argv);
@@ -86,6 +86,6 @@ public:
 };
 
 int startApp(int _argc, char **_argv) {
-    ExampleHelloWorld app("00-helloworld", "Initialization and debug text.", "https://bkaradzic.github.io/bgfx/examples.html#helloworld");
+    ExampleHelloWorld app;
     return entry::runApp(&app, _argc, _argv);
 }

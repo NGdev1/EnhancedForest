@@ -9,15 +9,7 @@
 #define ENTRY_H_HEADER_GUARD
 
 #include "dbg.h"
-#include <bx/bx.h>
 #include <bx/filepath.h>
-#include <bx/string.h>
-
-namespace bx {
-struct FileReaderI;
-struct FileWriterI;
-struct AllocatorI;
-} // namespace bx
 
 extern "C" int startApp(int _argc, char **_argv);
 
@@ -26,6 +18,7 @@ extern "C" int startApp(int _argc, char **_argv);
 #define ENTRY_WINDOW_FLAG_FRAME UINT32_C(0x00000002)
 
 namespace entry {
+
 struct WindowHandle {
     uint16_t idx;
 };
@@ -36,6 +29,7 @@ inline bool isValid(WindowHandle _handle) {
 struct GamepadHandle {
     uint16_t idx;
 };
+
 inline bool isValid(GamepadHandle _handle) {
     return UINT16_MAX != _handle.idx;
 }
@@ -198,8 +192,6 @@ struct Suspend {
     };
 };
 
-const char *getName(Key::Enum _key);
-
 struct MouseState {
     MouseState()
         : m_mx(0)
@@ -225,10 +217,6 @@ struct GamepadState {
 };
 
 bool processEvents(uint32_t &_width, uint32_t &_height, uint32_t &_debug, uint32_t &_reset, MouseState *_mouse = NULL);
-
-bx::FileReaderI *getFileReader();
-bx::FileWriterI *getFileWriter();
-bx::AllocatorI *getAllocator();
 
 WindowHandle createWindow(
     int32_t _x, int32_t _y, uint32_t _width, uint32_t _height, uint32_t _flags = ENTRY_WINDOW_FLAG_NONE, const char *_title = "");
@@ -262,7 +250,7 @@ bool processWindowEvents(WindowState &_state, uint32_t &_debug, uint32_t &_reset
 class BX_NO_VTABLE AppI {
 public:
     ///
-    AppI(const char *_name, const char *_description, const char *_url = "https://bkaradzic.github.io/bgfx/index.html");
+    AppI();
 
     ///
     virtual ~AppI() = 0;
@@ -275,32 +263,7 @@ public:
 
     ///
     virtual bool update() = 0;
-
-    ///
-    const char *getName() const;
-
-    ///
-    const char *getDescription() const;
-
-    ///
-    const char *getUrl() const;
-
-    ///
-    AppI *getNext();
-
-    AppI *m_next;
-
-private:
-    const char *m_name;
-    const char *m_description;
-    const char *m_url;
 };
-
-///
-AppI *getFirstApp();
-
-///
-uint32_t getNumApps();
 
 ///
 int runApp(AppI *_app, int _argc, const char *const *_argv);

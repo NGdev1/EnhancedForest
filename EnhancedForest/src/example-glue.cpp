@@ -106,14 +106,14 @@ static bool s_showStats = false;
 
 void showExampleDialog(entry::AppI *_app, const char *_errorText) {
     char temp[1024];
-    bx::snprintf(temp, BX_COUNTOF(temp), "Example: %s", _app->getName());
+    bx::snprintf(temp, BX_COUNTOF(temp), "Example: %s", "Neverland");
 
     ImGui::SetNextWindowPos(ImVec2(10.0f, 50.0f), ImGuiCond_FirstUseEver);
     ImGui::SetNextWindowSize(ImVec2(300.0f, 210.0f), ImGuiCond_FirstUseEver);
 
     ImGui::Begin(temp);
 
-    ImGui::TextWrapped("%s", _app->getDescription());
+    ImGui::TextWrapped("%s", "NEVERLAND");
 
     ImGui::Separator();
 
@@ -131,19 +131,6 @@ void showExampleDialog(entry::AppI *_app, const char *_errorText) {
     }
 
     {
-        uint32_t num = entry::getNumApps();
-        const char **items = (const char **)alloca(num * sizeof(void *));
-
-        uint32_t ii = 0;
-        int32_t current = 0;
-        for (entry::AppI *app = entry::getFirstApp(); NULL != app; app = app->getNext()) {
-            if (app == _app) {
-                current = ii;
-            }
-
-            items[ii++] = app->getName();
-        }
-
         const bgfx::Caps *caps = bgfx::getCaps();
         if (0 != (caps->supported & BGFX_CAPS_GRAPHICS_DEBUGGER)) {
             ImGui::SameLine();
@@ -157,59 +144,6 @@ void showExampleDialog(entry::AppI *_app, const char *_errorText) {
 
         ImGui::PopStyleVar();
     }
-
-#if 0
-	{
-		bgfx::RendererType::Enum supportedRenderers[bgfx::RendererType::Count];
-		uint8_t num = bgfx::getSupportedRenderers(BX_COUNTOF(supportedRenderers), supportedRenderers);
-
-		const bgfx::Caps* caps = bgfx::getCaps();
-
-		const char* items[bgfx::RendererType::Count];
-
-		int32_t current = 0;
-		for (uint8_t ii = 0; ii < num; ++ii)
-		{
-			items[ii] = bgfx::getRendererName(supportedRenderers[ii]);
-			if (supportedRenderers[ii] == caps->rendererType)
-			{
-				current = ii;
-			}
-		}
-
-		if (ImGui::Combo("Renderer", &current, items, num) )
-		{
-			cmdExec("app restart");
-		}
-
-		num = caps->numGPUs;
-		if (0 != num)
-		{
-			current = 0;
-			for (uint8_t ii = 0; ii < num; ++ii)
-			{
-				const bgfx::Caps::GPU& gpu = caps->gpu[ii];
-
-				items[ii] = gpu.vendorId == BGFX_PCI_ID_AMD    ? "AMD"
-						  : gpu.vendorId == BGFX_PCI_ID_INTEL  ? "Intel"
-						  : gpu.vendorId == BGFX_PCI_ID_NVIDIA ? "nVidia"
-						  : "Unknown?"
-						  ;
-
-				if (caps->vendorId == gpu.vendorId
-				&&  caps->deviceId == gpu.deviceId)
-				{
-					current = ii;
-				}
-			}
-
-			if (ImGui::Combo("GPU", &current, items, num) )
-			{
-				cmdExec("app restart");
-			}
-		}
-	}
-#endif // 0
 
     const bgfx::Stats *stats = bgfx::getStats();
     const double toMsCpu = 1000.0 / stats->cpuTimerFreq;

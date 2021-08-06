@@ -19,6 +19,8 @@ namespace stl = tinystl;
 #include <meshoptimizer/src/meshoptimizer.h>
 #include <bimg/decode.h>
 
+#include "fileio.hpp"
+#include "bxallocator.hpp"
 #include "bgfx_utils.h"
 #include "entry.h"
 

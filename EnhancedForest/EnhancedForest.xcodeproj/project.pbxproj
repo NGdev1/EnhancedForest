@@ -60,6 +60,10 @@
 		8492AEFC26B52D4700D0B2EB /* libbimg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FF710926B525A10048DE6C /* libbimg.a */; };
 		8492AEFE26B52D6900D0B2EB /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8492AEFD26B52D6900D0B2EB /* Metal.framework */; };
 		8492AF0026B52D7C00D0B2EB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8492AEFF26B52D7C00D0B2EB /* Cocoa.framework */; };
+		84B38AF126BD72C600880D84 /* fileio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84B38AEF26BD72C600880D84 /* fileio.cpp */; };
+		84B38AF226BD72C900880D84 /* fileio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84B38AEF26BD72C600880D84 /* fileio.cpp */; };
+		84B38AF626BD737400880D84 /* bxallocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84B38AF426BD737400880D84 /* bxallocator.cpp */; };
+		84B38AF726BD737700880D84 /* bxallocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84B38AF426BD737400880D84 /* bxallocator.cpp */; };
 		84FF713326B525D00048DE6C /* libbgfx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FF710726B525A10048DE6C /* libbgfx.a */; };
 /* End PBXBuildFile section */
 
@@ -390,6 +394,10 @@
 		8492AF0226B52D9800D0B2EB /* MetalPerformanceShadersGraph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalPerformanceShadersGraph.framework; path = System/Library/Frameworks/MetalPerformanceShadersGraph.framework; sourceTree = SDKROOT; };
 		8492AF0326B52D9800D0B2EB /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		84B09A7026B5234500A65A74 /* EnhancedForest-mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EnhancedForest-mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B38AEF26BD72C600880D84 /* fileio.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fileio.cpp; sourceTree = "<group>"; };
+		84B38AF026BD72C600880D84 /* fileio.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fileio.hpp; sourceTree = "<group>"; };
+		84B38AF426BD737400880D84 /* bxallocator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bxallocator.cpp; sourceTree = "<group>"; };
+		84B38AF526BD737400880D84 /* bxallocator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = bxallocator.hpp; sourceTree = "<group>"; };
 		84FF70E826B525A10048DE6C /* bgfx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = bgfx.xcodeproj; path = ../Vendor/bgfx/bgfx.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -493,6 +501,9 @@
 		8492AEE426B5293800D0B2EB /* entry */ = {
 			isa = PBXGroup;
 			children = (
+				84B38AF926BDA29F00880D84 /* enums */,
+				84B38AF326BD736300880D84 /* allocator */,
+				84B38AEE26BD72A500880D84 /* filesystem */,
 				84120D0326B5313100B38B86 /* entry_osx.mm */,
 				84120D8E26B5D1CB00B38B86 /* entry_ios.mm */,
 				8444364526BBF4B90001F5A4 /* entry_windows.cpp */,
@@ -525,6 +536,31 @@
 				84120D7226B5CD7D00B38B86 /* EnhancedForest-ios.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		84B38AEE26BD72A500880D84 /* filesystem */ = {
+			isa = PBXGroup;
+			children = (
+				84B38AEF26BD72C600880D84 /* fileio.cpp */,
+				84B38AF026BD72C600880D84 /* fileio.hpp */,
+			);
+			path = filesystem;
+			sourceTree = "<group>";
+		};
+		84B38AF326BD736300880D84 /* allocator */ = {
+			isa = PBXGroup;
+			children = (
+				84B38AF426BD737400880D84 /* bxallocator.cpp */,
+				84B38AF526BD737400880D84 /* bxallocator.hpp */,
+			);
+			path = allocator;
+			sourceTree = "<group>";
+		};
+		84B38AF926BDA29F00880D84 /* enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = enums;
 			sourceTree = "<group>";
 		};
 		84FF70E726B525960048DE6C /* Projects */ = {
@@ -920,6 +956,8 @@
 				841686F826B5F34A00EB3BB9 /* example-glue.cpp in Sources */,
 				84120D9026B5D1CF00B38B86 /* entry_ios.mm in Sources */,
 				841686EE26B5F04600EB3BB9 /* imgui.cpp in Sources */,
+				84B38AF226BD72C900880D84 /* fileio.cpp in Sources */,
+				84B38AF726BD737700880D84 /* bxallocator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -937,6 +975,8 @@
 				841686F726B5F34A00EB3BB9 /* example-glue.cpp in Sources */,
 				845541DD26B5247500D18CC7 /* Application.cpp in Sources */,
 				841686ED26B5F04600EB3BB9 /* imgui.cpp in Sources */,
+				84B38AF126BD72C600880D84 /* fileio.cpp in Sources */,
+				84B38AF626BD737400880D84 /* bxallocator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

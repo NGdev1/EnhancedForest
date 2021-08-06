@@ -14,6 +14,7 @@
 #include <bx/filepath.h>
 
 #include "entry.h"
+#include "allocator/bxallocator.hpp"
 
 #ifndef ENTRY_CONFIG_USE_NOOP
 #    define ENTRY_CONFIG_USE_NOOP 0
@@ -71,8 +72,6 @@ struct TinyStlAllocator {
 };
 
 int main(int _argc, const char *const *_argv);
-
-char keyToAscii(Key::Enum _key, uint8_t _modifiers);
 
 struct Event {
     enum Enum {
