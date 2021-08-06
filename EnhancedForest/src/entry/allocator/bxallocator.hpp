@@ -8,7 +8,9 @@
 #pragma once
 
 namespace bx {
+
 struct AllocatorI;
+
 }
 
 namespace entry {

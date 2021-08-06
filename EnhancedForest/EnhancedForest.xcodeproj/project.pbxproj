@@ -35,6 +35,7 @@
 		841686F726B5F34A00EB3BB9 /* example-glue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 841686F626B5F34A00EB3BB9 /* example-glue.cpp */; };
 		841686F826B5F34A00EB3BB9 /* example-glue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 841686F626B5F34A00EB3BB9 /* example-glue.cpp */; };
 		841686FF26B5F6E800EB3BB9 /* libdear-imgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FF710D26B525A10048DE6C /* libdear-imgui.a */; };
+		84263C0E26BDE9FE00D01719 /* bounds.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8492AEE926B52A1B00D0B2EB /* bounds.cpp */; };
 		8433F1D626B5D64B004DAF14 /* libbgfx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FF710726B525A10048DE6C /* libbgfx.a */; };
 		8433F1E126B5D7D0004DAF14 /* libbx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FF710B26B525A10048DE6C /* libbx.a */; };
 		8433F1E426B5D88A004DAF14 /* libbimg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FF710926B525A10048DE6C /* libbimg.a */; };
@@ -52,7 +53,6 @@
 		8453C5BA26B5D42C00B8B839 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8453C5B826B5D42900B8B839 /* LaunchScreen.storyboard */; };
 		845541DB26B5247500D18CC7 /* AssetsOSX.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845541D726B5247500D18CC7 /* AssetsOSX.xcassets */; };
 		845541DD26B5247500D18CC7 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 845541DA26B5247500D18CC7 /* Application.cpp */; };
-		8492AEEA26B52A1B00D0B2EB /* bounds.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8492AEE926B52A1B00D0B2EB /* bounds.cpp */; };
 		8492AEEC26B52A3F00D0B2EB /* bgfx_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8492AEEB26B52A3F00D0B2EB /* bgfx_utils.cpp */; };
 		8492AEEF26B52C3B00D0B2EB /* entry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8492AEEE26B52C3B00D0B2EB /* entry.cpp */; };
 		8492AEF626B52CD800D0B2EB /* input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8492AEF426B52CD800D0B2EB /* input.cpp */; };
@@ -377,17 +377,17 @@
 		845541D726B5247500D18CC7 /* AssetsOSX.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AssetsOSX.xcassets; sourceTree = "<group>"; };
 		845541D826B5247500D18CC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845541DA26B5247500D18CC7 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
-		8492AEE526B5294200D0B2EB /* entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = entry.h; sourceTree = "<group>"; };
-		8492AEE626B5299300D0B2EB /* dbg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dbg.h; sourceTree = "<group>"; };
-		8492AEE726B529CC00D0B2EB /* bgfx_utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bgfx_utils.h; sourceTree = "<group>"; };
+		8492AEE526B5294200D0B2EB /* entry.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = entry.hpp; sourceTree = "<group>"; };
+		8492AEE626B5299300D0B2EB /* dbg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = dbg.hpp; sourceTree = "<group>"; };
+		8492AEE726B529CC00D0B2EB /* bgfx_utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = bgfx_utils.hpp; sourceTree = "<group>"; };
 		8492AEE826B529FF00D0B2EB /* bounds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bounds.h; sourceTree = "<group>"; };
 		8492AEE926B52A1B00D0B2EB /* bounds.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bounds.cpp; sourceTree = "<group>"; };
 		8492AEEB26B52A3F00D0B2EB /* bgfx_utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bgfx_utils.cpp; sourceTree = "<group>"; };
 		8492AEED26B52B2B00D0B2EB /* bounds.inl */ = {isa = PBXFileReference; lastKnownFileType = text; path = bounds.inl; sourceTree = "<group>"; };
 		8492AEEE26B52C3B00D0B2EB /* entry.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = entry.cpp; sourceTree = "<group>"; };
-		8492AEF026B52C5D00D0B2EB /* entry_p.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = entry_p.h; sourceTree = "<group>"; };
+		8492AEF026B52C5D00D0B2EB /* event_queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = event_queue.hpp; sourceTree = "<group>"; };
 		8492AEF426B52CD800D0B2EB /* input.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = input.cpp; sourceTree = "<group>"; };
-		8492AEF526B52CD800D0B2EB /* input.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = input.h; sourceTree = "<group>"; };
+		8492AEF526B52CD800D0B2EB /* input.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = input.hpp; sourceTree = "<group>"; };
 		8492AEFD26B52D6900D0B2EB /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		8492AEFF26B52D7C00D0B2EB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8492AF0126B52D9800D0B2EB /* MetalPerformanceShaders.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalPerformanceShaders.framework; path = System/Library/Frameworks/MetalPerformanceShaders.framework; sourceTree = SDKROOT; };
@@ -398,6 +398,9 @@
 		84B38AF026BD72C600880D84 /* fileio.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fileio.hpp; sourceTree = "<group>"; };
 		84B38AF426BD737400880D84 /* bxallocator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bxallocator.cpp; sourceTree = "<group>"; };
 		84B38AF526BD737400880D84 /* bxallocator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = bxallocator.hpp; sourceTree = "<group>"; };
+		84B38AFA26BDA31100880D84 /* base_enums.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = base_enums.hpp; sourceTree = "<group>"; };
+		84B38AFD26BDA3B100880D84 /* events.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = events.hpp; sourceTree = "<group>"; };
+		84B38B0126BDAA4100880D84 /* window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = window.hpp; sourceTree = "<group>"; };
 		84FF70E826B525A10048DE6C /* bgfx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = bgfx.xcodeproj; path = ../Vendor/bgfx/bgfx.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -489,7 +492,7 @@
 				8492AEE426B5293800D0B2EB /* entry */,
 				845541DA26B5247500D18CC7 /* Application.cpp */,
 				8492AEEB26B52A3F00D0B2EB /* bgfx_utils.cpp */,
-				8492AEE726B529CC00D0B2EB /* bgfx_utils.h */,
+				8492AEE726B529CC00D0B2EB /* bgfx_utils.hpp */,
 				8492AEE826B529FF00D0B2EB /* bounds.h */,
 				8492AEE926B52A1B00D0B2EB /* bounds.cpp */,
 				8492AEED26B52B2B00D0B2EB /* bounds.inl */,
@@ -501,18 +504,19 @@
 		8492AEE426B5293800D0B2EB /* entry */ = {
 			isa = PBXGroup;
 			children = (
+				84B38B0026BDAA3200880D84 /* window */,
+				84B38AFB26BDA3A300880D84 /* events */,
 				84B38AF926BDA29F00880D84 /* enums */,
 				84B38AF326BD736300880D84 /* allocator */,
 				84B38AEE26BD72A500880D84 /* filesystem */,
 				84120D0326B5313100B38B86 /* entry_osx.mm */,
 				84120D8E26B5D1CB00B38B86 /* entry_ios.mm */,
 				8444364526BBF4B90001F5A4 /* entry_windows.cpp */,
-				8492AEE526B5294200D0B2EB /* entry.h */,
+				8492AEE526B5294200D0B2EB /* entry.hpp */,
 				8492AEEE26B52C3B00D0B2EB /* entry.cpp */,
-				8492AEE626B5299300D0B2EB /* dbg.h */,
-				8492AEF026B52C5D00D0B2EB /* entry_p.h */,
+				8492AEE626B5299300D0B2EB /* dbg.hpp */,
 				8492AEF426B52CD800D0B2EB /* input.cpp */,
-				8492AEF526B52CD800D0B2EB /* input.h */,
+				8492AEF526B52CD800D0B2EB /* input.hpp */,
 			);
 			path = entry;
 			sourceTree = "<group>";
@@ -559,8 +563,26 @@
 		84B38AF926BDA29F00880D84 /* enums */ = {
 			isa = PBXGroup;
 			children = (
+				84B38AFA26BDA31100880D84 /* base_enums.hpp */,
 			);
 			path = enums;
+			sourceTree = "<group>";
+		};
+		84B38AFB26BDA3A300880D84 /* events */ = {
+			isa = PBXGroup;
+			children = (
+				84B38AFD26BDA3B100880D84 /* events.hpp */,
+				8492AEF026B52C5D00D0B2EB /* event_queue.hpp */,
+			);
+			path = events;
+			sourceTree = "<group>";
+		};
+		84B38B0026BDAA3200880D84 /* window */ = {
+			isa = PBXGroup;
+			children = (
+				84B38B0126BDAA4100880D84 /* window.hpp */,
+			);
+			path = window;
 			sourceTree = "<group>";
 		};
 		84FF70E726B525960048DE6C /* Projects */ = {
@@ -967,11 +989,11 @@
 			files = (
 				8444364326BB32680001F5A4 /* entry_ios.mm in Sources */,
 				8492AEEF26B52C3B00D0B2EB /* entry.cpp in Sources */,
+				84263C0E26BDE9FE00D01719 /* bounds.cpp in Sources */,
 				8444364626BBF4B90001F5A4 /* entry_windows.cpp in Sources */,
 				8492AEF626B52CD800D0B2EB /* input.cpp in Sources */,
 				84120D0426B5313300B38B86 /* entry_osx.mm in Sources */,
 				8492AEEC26B52A3F00D0B2EB /* bgfx_utils.cpp in Sources */,
-				8492AEEA26B52A1B00D0B2EB /* bounds.cpp in Sources */,
 				841686F726B5F34A00EB3BB9 /* example-glue.cpp in Sources */,
 				845541DD26B5247500D18CC7 /* Application.cpp in Sources */,
 				841686ED26B5F04600EB3BB9 /* imgui.cpp in Sources */,

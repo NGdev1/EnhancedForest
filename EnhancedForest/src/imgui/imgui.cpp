@@ -12,7 +12,7 @@
 #include <dear-imgui/imgui_internal.h>
 
 #include "imgui.h"
-#include "../bgfx_utils.h"
+#include "../bgfx_utils.hpp"
 
 //#define USE_ENTRY 1
 

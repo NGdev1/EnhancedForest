@@ -5,7 +5,7 @@
 //  Created by Admin on 31.07.2021.
 //
 
-#include "entry_p.h"
+#include "event_queue.hpp"
 
 #if ENTRY_CONFIG_USE_NATIVE && BX_PLATFORM_IOS
 

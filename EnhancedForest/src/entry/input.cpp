@@ -7,8 +7,8 @@
 
 #include <memory.h>
 
-#include "entry_p.h"
-#include "input.h"
+#include "event_queue.hpp"
+#include "input.hpp"
 #include "allocator/bxallocator.hpp"
 
 #include <bx/allocator.h>
