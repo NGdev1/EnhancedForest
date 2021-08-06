@@ -9,7 +9,6 @@
 
 #include "entry_p.h"
 #include "input.h"
-#include "cmd.h"
 
 #include <bx/allocator.h>
 #include <bx/ringbuffer.h>
@@ -163,53 +162,6 @@ struct Input {
 
     ~Input() {}
 
-    void addBindings(const char *_name, const InputBinding *_bindings) {
-        m_inputBindingsMap.insert(stl::make_pair(stl::string(_name), _bindings));
-    }
-
-    void removeBindings(const char *_name) {
-        InputBindingMap::iterator it = m_inputBindingsMap.find(stl::string(_name));
-        if (it != m_inputBindingsMap.end()) {
-            m_inputBindingsMap.erase(it);
-        }
-    }
-
-    void process(const InputBinding *_bindings) {
-        for (const InputBinding *binding = _bindings; binding->m_key != entry::Key::None; ++binding) {
-            uint8_t modifiers;
-            bool down = InputKeyboard::decodeKeyState(m_keyboard.m_key[binding->m_key], modifiers);
-
-            if (binding->m_flags == 1) {
-                if (down) {
-                    if (modifiers == binding->m_modifiers && !m_keyboard.m_once[binding->m_key]) {
-                        if (NULL == binding->m_fn) {
-                            cmdExec((const char *)binding->m_userData);
-                        } else {
-                            binding->m_fn(binding->m_userData);
-                        }
-                        m_keyboard.m_once[binding->m_key] = true;
-                    }
-                } else {
-                    m_keyboard.m_once[binding->m_key] = false;
-                }
-            } else {
-                if (down && modifiers == binding->m_modifiers) {
-                    if (NULL == binding->m_fn) {
-                        cmdExec((const char *)binding->m_userData);
-                    } else {
-                        binding->m_fn(binding->m_userData);
-                    }
-                }
-            }
-        }
-    }
-
-    void process() {
-        for (InputBindingMap::const_iterator it = m_inputBindingsMap.begin(); it != m_inputBindingsMap.end(); ++it) {
-            process(it->second);
-        }
-    }
-
     void reset() {
         m_mouse.reset();
         m_keyboard.reset();
@@ -233,18 +185,6 @@ void inputInit() {
 
 void inputShutdown() {
     BX_DELETE(entry::getAllocator(), s_input);
-}
-
-void inputAddBindings(const char *_name, const InputBinding *_bindings) {
-    s_input->addBindings(_name, _bindings);
-}
-
-void inputRemoveBindings(const char *_name) {
-    s_input->removeBindings(_name);
-}
-
-void inputProcess() {
-    s_input->process();
 }
 
 void inputSetMouseResolution(uint16_t _width, uint16_t _height) {

@@ -12,12 +12,7 @@
 
 #include <time.h>
 
-#if BX_PLATFORM_EMSCRIPTEN
-#    include <emscripten.h>
-#endif // BX_PLATFORM_EMSCRIPTEN
-
 #include "entry_p.h"
-#include "cmd.h"
 #include "input.h"
 
 extern "C" int32_t startApp(int32_t _argc, char **_argv);
@@ -247,150 +242,8 @@ bool setOrToggle(uint32_t &_flags, const char *_name, uint32_t _bit, int _first,
     return false;
 }
 
-int cmdMouseLock(CmdContext * /*_context*/, void * /*_userData*/, int _argc, char const *const *_argv) {
-    if (1 < _argc) {
-        bool set = false;
-        if (2 < _argc) {
-            bx::fromString(&set, _argv[1]);
-            inputSetMouseLock(set);
-        } else {
-            inputSetMouseLock(!inputIsMouseLocked());
-        }
-
-        return bx::kExitSuccess;
-    }
-
-    return bx::kExitFailure;
-}
-
-int cmdGraphics(CmdContext * /*_context*/, void * /*_userData*/, int _argc, char const *const *_argv) {
-    if (_argc > 1) {
-        if (setOrToggle(s_reset, "vsync", BGFX_RESET_VSYNC, 1, _argc, _argv) ||
-            setOrToggle(s_reset, "maxaniso", BGFX_RESET_MAXANISOTROPY, 1, _argc, _argv) ||
-            setOrToggle(s_reset, "msaa", BGFX_RESET_MSAA_X16, 1, _argc, _argv) ||
-            setOrToggle(s_reset, "flush", BGFX_RESET_FLUSH_AFTER_RENDER, 1, _argc, _argv) ||
-            setOrToggle(s_reset, "flip", BGFX_RESET_FLIP_AFTER_RENDER, 1, _argc, _argv) ||
-            setOrToggle(s_reset, "hidpi", BGFX_RESET_HIDPI, 1, _argc, _argv) ||
-            setOrToggle(s_reset, "depthclamp", BGFX_RESET_DEPTH_CLAMP, 1, _argc, _argv)) {
-            return bx::kExitSuccess;
-        } else if (setOrToggle(s_debug, "stats", BGFX_DEBUG_STATS, 1, _argc, _argv) ||
-                   setOrToggle(s_debug, "ifh", BGFX_DEBUG_IFH, 1, _argc, _argv) ||
-                   setOrToggle(s_debug, "text", BGFX_DEBUG_TEXT, 1, _argc, _argv) ||
-                   setOrToggle(s_debug, "wireframe", BGFX_DEBUG_WIREFRAME, 1, _argc, _argv) ||
-                   setOrToggle(s_debug, "profiler", BGFX_DEBUG_PROFILER, 1, _argc, _argv)) {
-            bgfx::setDebug(s_debug);
-            return bx::kExitSuccess;
-        } else if (0 == bx::strCmp(_argv[1], "screenshot")) {
-            bgfx::FrameBufferHandle fbh = BGFX_INVALID_HANDLE;
-
-            if (_argc > 2) {
-                bgfx::requestScreenShot(fbh, _argv[2]);
-            } else {
-                time_t tt;
-                time(&tt);
-
-                char filePath[256];
-                bx::snprintf(filePath, sizeof(filePath), "temp/screenshot-%d", tt);
-                bgfx::requestScreenShot(fbh, filePath);
-            }
-
-            return bx::kExitSuccess;
-        } else if (0 == bx::strCmp(_argv[1], "fullscreen")) {
-            WindowHandle window = {0};
-            toggleFullscreen(window);
-            return bx::kExitSuccess;
-        }
-    }
-
-    return bx::kExitFailure;
-}
-
-int cmdExit(CmdContext * /*_context*/, void * /*_userData*/, int /*_argc*/, char const *const * /*_argv*/) {
-    s_exit = true;
-    return bx::kExitSuccess;
-}
-
-static const InputBinding s_bindings[] = {{entry::Key::KeyQ, entry::Modifier::LeftCtrl, 1, NULL, "exit"},
-    {entry::Key::KeyQ, entry::Modifier::RightCtrl, 1, NULL, "exit"},
-    {entry::Key::KeyF, entry::Modifier::LeftCtrl, 1, NULL, "graphics fullscreen"},
-    {entry::Key::KeyF, entry::Modifier::RightCtrl, 1, NULL, "graphics fullscreen"},
-    {entry::Key::Return, entry::Modifier::RightAlt, 1, NULL, "graphics fullscreen"},
-    {entry::Key::F1, entry::Modifier::None, 1, NULL, "graphics stats"},
-    {entry::Key::F1, entry::Modifier::LeftCtrl, 1, NULL, "graphics ifh"},
-    {entry::Key::GamepadStart, entry::Modifier::None, 1, NULL, "graphics stats"},
-    {entry::Key::F1, entry::Modifier::LeftShift, 1, NULL, "graphics stats 0\ngraphics text 0"},
-    {entry::Key::F3, entry::Modifier::None, 1, NULL, "graphics wireframe"},
-    {entry::Key::F6, entry::Modifier::None, 1, NULL, "graphics profiler"},
-    {entry::Key::F7, entry::Modifier::None, 1, NULL, "graphics vsync"}, {entry::Key::F8, entry::Modifier::None, 1, NULL, "graphics msaa"},
-    {entry::Key::F9, entry::Modifier::None, 1, NULL, "graphics flush"}, {entry::Key::F10, entry::Modifier::None, 1, NULL, "graphics hidpi"},
-    {entry::Key::Print, entry::Modifier::None, 1, NULL, "graphics screenshot"},
-    {entry::Key::KeyP, entry::Modifier::LeftCtrl, 1, NULL, "graphics screenshot"},
-
-    INPUT_BINDING_END};
-
-#if BX_PLATFORM_EMSCRIPTEN
-static AppI *s_app;
-static void updateApp() {
-    s_app->update();
-}
-#endif // BX_PLATFORM_EMSCRIPTEN
-
-static AppI *s_currentApp = NULL;
 static AppI *s_apps = NULL;
 static uint32_t s_numApps = 0;
-
-static char s_restartArgs[1024] = {'\0'};
-
-static AppI *getCurrentApp(AppI *_set = NULL) {
-    if (NULL != _set) {
-        s_currentApp = _set;
-    } else if (NULL == s_currentApp) {
-        s_currentApp = getFirstApp();
-    }
-
-    return s_currentApp;
-}
-
-static AppI *getNextWrap(AppI *_app) {
-    AppI *next = _app->getNext();
-    if (NULL != next) {
-        return next;
-    }
-
-    return getFirstApp();
-}
-
-int cmdApp(CmdContext * /*_context*/, void * /*_userData*/, int _argc, char const *const *_argv) {
-    if (0 == bx::strCmp(_argv[1], "restart")) {
-        if (2 == _argc) {
-            bx::strCopy(s_restartArgs, BX_COUNTOF(s_restartArgs), getCurrentApp()->getName());
-            return bx::kExitSuccess;
-        }
-
-        if (0 == bx::strCmp(_argv[2], "next")) {
-            AppI *next = getNextWrap(getCurrentApp());
-            bx::strCopy(s_restartArgs, BX_COUNTOF(s_restartArgs), next->getName());
-            return bx::kExitSuccess;
-        } else if (0 == bx::strCmp(_argv[2], "prev")) {
-            AppI *prev = getCurrentApp();
-            for (AppI *app = getNextWrap(prev); app != getCurrentApp(); app = getNextWrap(app)) {
-                prev = app;
-            }
-
-            bx::strCopy(s_restartArgs, BX_COUNTOF(s_restartArgs), prev->getName());
-            return bx::kExitSuccess;
-        }
-
-        for (AppI *app = getFirstApp(); NULL != app; app = app->getNext()) {
-            if (0 == bx::strCmp(_argv[2], app->getName())) {
-                bx::strCopy(s_restartArgs, BX_COUNTOF(s_restartArgs), app->getName());
-                return bx::kExitSuccess;
-            }
-        }
-    }
-
-    return bx::kExitFailure;
-}
 
 AppI::AppI(const char *_name, const char *_description, const char *_url) {
     m_name = _name;
@@ -399,24 +252,9 @@ AppI::AppI(const char *_name, const char *_description, const char *_url) {
     m_next = s_apps;
 
     s_apps = this;
-    s_numApps++;
 }
 
-AppI::~AppI() {
-    for (AppI *prev = NULL, *app = s_apps, *next = app->getNext(); NULL != app; prev = app, app = next, next = app->getNext()) {
-        if (app == this) {
-            if (NULL != prev) {
-                prev->m_next = next;
-            } else {
-                s_apps = next;
-            }
-
-            --s_numApps;
-
-            break;
-        }
-    }
-}
+AppI::~AppI() {}
 
 const char *AppI::getName() const {
     return m_name;
@@ -449,16 +287,8 @@ int runApp(AppI *_app, int _argc, const char *const *_argv) {
     WindowHandle defaultWindow = {0};
     setWindowSize(defaultWindow, s_width, s_height);
 
-#if BX_PLATFORM_EMSCRIPTEN
-    s_app = _app;
-    emscripten_set_main_loop(&updateApp, -1, 1);
-#else
-    while (_app->update()) {
-        if (0 != bx::strLen(s_restartArgs)) {
-            break;
-        }
-    }
-#endif // BX_PLATFORM_EMSCRIPTEN
+    while (_app->update())
+        ;
 
     return _app->shutdown();
 }
@@ -470,43 +300,13 @@ static int32_t sortApp(const void *_lhs, const void *_rhs) {
     return bx::strCmpI(lhs->getName(), rhs->getName());
 }
 
-static void sortApps() {
-    if (2 > s_numApps) {
-        return;
-    }
-
-    AppI **apps = (AppI **)BX_ALLOC(g_allocator, s_numApps * sizeof(AppI *));
-
-    uint32_t ii = 0;
-    for (AppI *app = getFirstApp(); NULL != app; app = app->getNext()) {
-        apps[ii++] = app;
-    }
-    bx::quickSort(apps, s_numApps, sizeof(AppI *), sortApp);
-
-    s_apps = apps[0];
-    for (ii = 1; ii < s_numApps; ++ii) {
-        AppI *app = apps[ii - 1];
-        app->m_next = apps[ii];
-    }
-    apps[s_numApps - 1]->m_next = NULL;
-
-    BX_FREE(g_allocator, apps);
-}
-
 int main(int _argc, const char *const *_argv) {
     DBG(BX_COMPILER_NAME " / " BX_CPU_NAME " / " BX_ARCH_NAME " / " BX_PLATFORM_NAME);
 
     s_fileReader = BX_NEW(g_allocator, FileReader);
     s_fileWriter = BX_NEW(g_allocator, FileWriter);
 
-    cmdInit();
-    cmdAdd("mouselock", cmdMouseLock);
-    cmdAdd("graphics", cmdGraphics);
-    cmdAdd("exit", cmdExit);
-    cmdAdd("app", cmdApp);
-
     inputInit();
-    inputAddBindings("bindings", s_bindings);
 
     entry::WindowHandle defaultWindow = {0};
 
@@ -517,48 +317,25 @@ int main(int _argc, const char *const *_argv) {
     // toggleFullscreen(defaultWindow);
     setWindowSize(defaultWindow, ENTRY_DEFAULT_WIDTH, ENTRY_DEFAULT_HEIGHT);
 
-    sortApps();
-
     const char *find = "";
     if (1 < _argc) {
         find = _argv[_argc - 1];
     }
 
-restart:
     AppI *selected = NULL;
 
     for (AppI *app = getFirstApp(); NULL != app; app = app->getNext()) {
         if (NULL == selected && !bx::strFindI(app->getName(), find).isEmpty()) {
             selected = app;
         }
-#if 0
-            DBG("%c %s, %s"
-                , app == selected ? '>' : ' '
-                , app->getName()
-                , app->getDescription()
-                );
-#endif // 0
     }
 
     int32_t result = bx::kExitSuccess;
-    s_restartArgs[0] = '\0';
-    if (0 == s_numApps) {
-        result = ::startApp(_argc, (char **)_argv);
-    } else {
-        result = runApp(getCurrentApp(selected), _argc, _argv);
-    }
-
-    if (0 != bx::strLen(s_restartArgs)) {
-        find = s_restartArgs;
-        goto restart;
-    }
+    result = ::startApp(_argc, (char **)_argv);
 
     setCurrentDir("");
 
-    inputRemoveBindings("bindings");
     inputShutdown();
-
-    cmdShutdown();
 
     BX_DELETE(g_allocator, s_fileReader);
     s_fileReader = NULL;
@@ -670,8 +447,6 @@ bool processEvents(uint32_t &_width, uint32_t &_height, uint32_t &_debug, uint32
                     break;
             }
         }
-
-        inputProcess();
 
     } while (NULL != ev);
 
@@ -800,8 +575,6 @@ bool processWindowEvents(WindowState &_state, uint32_t &_debug, uint32_t &_reset
                     break;
             }
         }
-
-        inputProcess();
 
     } while (NULL != ev);
 

@@ -5,7 +5,6 @@
 
 #include "imgui/imgui.h"
 #include "entry/entry.h"
-#include "entry/cmd.h"
 #include <bx/string.h>
 #include <bx/timer.h>
 #include <bx/math.h>
@@ -145,12 +144,6 @@ void showExampleDialog(entry::AppI *_app, const char *_errorText) {
             items[ii++] = app->getName();
         }
 
-        if (1 < num && ImGui::Combo("Example", &current, items, num)) {
-            char command[1024];
-            bx::snprintf(command, BX_COUNTOF(command), "app restart %s", items[current]);
-            cmdExec(command);
-        }
-
         const bgfx::Caps *caps = bgfx::getCaps();
         if (0 != (caps->supported & BGFX_CAPS_GRAPHICS_DEBUGGER)) {
             ImGui::SameLine();
@@ -158,27 +151,6 @@ void showExampleDialog(entry::AppI *_app, const char *_errorText) {
         }
 
         ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(3.0f, 3.0f));
-
-        if (ImGui::Button(ICON_FA_REPEAT " Restart")) {
-            cmdExec("app restart");
-        }
-
-        if (1 < entry::getNumApps()) {
-            ImGui::SameLine();
-            if (ImGui::Button(ICON_KI_PREVIOUS " Prev")) {
-                cmdExec("app restart prev");
-            }
-
-            ImGui::SameLine();
-            if (ImGui::Button(ICON_KI_NEXT " Next")) {
-                cmdExec("app restart next");
-            }
-        }
-
-        ImGui::SameLine();
-        if (ImGui::Button(ICON_KI_EXIT " Exit")) {
-            cmdExec("exit");
-        }
 
         ImGui::SameLine();
         s_showStats ^= ImGui::Button(ICON_FA_BAR_CHART);

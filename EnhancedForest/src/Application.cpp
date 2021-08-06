@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <bx/uint32_t.h>
 #include "bgfx_utils.h"
-#include "logo.h"
+// #include "logo.h"
 #include "entry.h"
 #include "imgui/imgui.h"
 
@@ -59,6 +59,16 @@ public:
 
     bool update() override {
         if (!entry::processEvents(m_width, m_height, m_debug, m_reset, &m_mouseState)) {
+            imguiBeginFrame(m_mouseState.m_mx, m_mouseState.m_my,
+                (m_mouseState.m_buttons[entry::MouseButton::Left] ? IMGUI_MBUT_LEFT : 0) |
+                    (m_mouseState.m_buttons[entry::MouseButton::Right] ? IMGUI_MBUT_RIGHT : 0) |
+                    (m_mouseState.m_buttons[entry::MouseButton::Middle] ? IMGUI_MBUT_MIDDLE : 0),
+                m_mouseState.m_mz, uint16_t(m_width), uint16_t(m_height));
+
+            showExampleDialog(this);
+
+            imguiEndFrame();
+
             bgfx::setViewRect(0, 0, 0, uint16_t(m_width), uint16_t(m_height));
             bgfx::touch(0);
 

@@ -46,15 +46,6 @@ void inputInit();
 void inputShutdown();
 
 ///
-void inputAddBindings(const char *_name, const InputBinding *_bindings);
-
-///
-void inputRemoveBindings(const char *_name);
-
-///
-void inputProcess();
-
-///
 void inputSetKeyState(entry::Key::Enum _key, uint8_t _modifiers, bool _down);
 
 ///
