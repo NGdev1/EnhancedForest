@@ -476,6 +476,21 @@
 			path = imgui;
 			sourceTree = "<group>";
 		};
+		84263C1026BE054100D01719 /* bgfx_spec */ = {
+			isa = PBXGroup;
+			children = (
+				841686C226B5F01E00EB3BB9 /* imgui */,
+				8492AEE426B5293800D0B2EB /* entry */,
+				8492AEEB26B52A3F00D0B2EB /* bgfx_utils.cpp */,
+				8492AEE726B529CC00D0B2EB /* bgfx_utils.hpp */,
+				8492AEE826B529FF00D0B2EB /* bounds.h */,
+				8492AEE926B52A1B00D0B2EB /* bounds.cpp */,
+				8492AEED26B52B2B00D0B2EB /* bounds.inl */,
+				841686F626B5F34A00EB3BB9 /* example-glue.cpp */,
+			);
+			path = bgfx_spec;
+			sourceTree = "<group>";
+		};
 		845541D526B5247500D18CC7 /* Resources-osx */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,15 +504,7 @@
 		845541D926B5247500D18CC7 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				841686C226B5F01E00EB3BB9 /* imgui */,
-				8492AEE426B5293800D0B2EB /* entry */,
 				845541DA26B5247500D18CC7 /* Application.cpp */,
-				8492AEEB26B52A3F00D0B2EB /* bgfx_utils.cpp */,
-				8492AEE726B529CC00D0B2EB /* bgfx_utils.hpp */,
-				8492AEE826B529FF00D0B2EB /* bounds.h */,
-				8492AEE926B52A1B00D0B2EB /* bounds.cpp */,
-				8492AEED26B52B2B00D0B2EB /* bounds.inl */,
-				841686F626B5F34A00EB3BB9 /* example-glue.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -526,6 +533,7 @@
 			isa = PBXGroup;
 			children = (
 				845541D926B5247500D18CC7 /* src */,
+				84263C1026BE054100D01719 /* bgfx_spec */,
 				845541D526B5247500D18CC7 /* Resources-osx */,
 				84120D8D26B5CF7600B38B86 /* Resources-ios */,
 				84FF70E726B525960048DE6C /* Projects */,
@@ -1140,7 +1148,7 @@
 					"${SRCROOT}/../Vendor/bgfx/bx/include",
 					"${SRCROOT}/../Vendor/bgfx/bimg/include",
 					"${SRCROOT}/../Vendor/bgfx/bgfx/3rdparty",
-					"${SRCROOT}/vendor",
+					"${SRCROOT}/bgfx_spec",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Resources-osx/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1213,7 +1221,7 @@
 					"${SRCROOT}/../Vendor/bgfx/bx/include",
 					"${SRCROOT}/../Vendor/bgfx/bimg/include",
 					"${SRCROOT}/../Vendor/bgfx/bgfx/3rdparty",
-					"${SRCROOT}/vendor",
+					"${SRCROOT}/bgfx_spec",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Resources-osx/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1312,7 +1320,7 @@
 					"${SRCROOT}/../Vendor/bgfx/bx/include",
 					"${SRCROOT}/../Vendor/bgfx/bimg/include",
 					"${SRCROOT}/../Vendor/bgfx/bgfx/3rdparty",
-					"${SRCROOT}/vendor",
+					"${SRCROOT}/bgfx_spec",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Resources-osx/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1386,7 +1394,7 @@
 					"${SRCROOT}/../Vendor/bgfx/bx/include",
 					"${SRCROOT}/../Vendor/bgfx/bimg/include",
 					"${SRCROOT}/../Vendor/bgfx/bgfx/3rdparty",
-					"${SRCROOT}/vendor",
+					"${SRCROOT}/bgfx_spec",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Resources-osx/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
