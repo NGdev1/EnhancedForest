@@ -7,10 +7,10 @@
 
 #pragma once
 
-#include <bx/filepath.h>
-
 #include "window.hpp"
 #include "base_enums.hpp"
+
+#include <bx/filepath.h>
 
 #define ENTRY_IMPLEMENT_EVENT(_class, _type)                                                                                               \
     _class(WindowHandle _handle)                                                                                                           \

@@ -30,10 +30,7 @@ void imguiBeginFrame(int32_t _mx, int32_t _my, uint8_t _button, int32_t _scroll,
     bgfx::ViewId _view = 255);
 void imguiEndFrame();
 
-namespace entry {
-class AppI;
-}
-void showExampleDialog(entry::AppI *_app, const char *_errorText = NULL);
+void showExampleDialog(const char *_errorText = NULL);
 
 namespace ImGui {
 #define IMGUI_FLAGS_NONE UINT8_C(0x00)

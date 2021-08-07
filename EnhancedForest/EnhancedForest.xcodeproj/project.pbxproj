@@ -366,6 +366,7 @@
 		841686E326B5F04600EB3BB9 /* fs_ocornut_imgui.bin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fs_ocornut_imgui.bin.h; sourceTree = "<group>"; };
 		841686E426B5F04600EB3BB9 /* roboto_regular.ttf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = roboto_regular.ttf.h; sourceTree = "<group>"; };
 		841686F626B5F34A00EB3BB9 /* example-glue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "example-glue.cpp"; sourceTree = "<group>"; };
+		84263C0F26BDFC0F00D01719 /* impl_at_platform.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = impl_at_platform.hpp; sourceTree = "<group>"; };
 		8433F1D726B5D71A004DAF14 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/Metal.framework; sourceTree = DEVELOPER_DIR; };
 		8433F1D926B5D724004DAF14 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		8433F1DB26B5D798004DAF14 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
@@ -581,6 +582,7 @@
 			isa = PBXGroup;
 			children = (
 				84B38B0126BDAA4100880D84 /* window.hpp */,
+				84263C0F26BDFC0F00D01719 /* impl_at_platform.hpp */,
 			);
 			path = window;
 			sourceTree = "<group>";

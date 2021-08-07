@@ -53,17 +53,26 @@ public:
     }
 
     bool update() override {
-        if (inputGetKeyState(entry::Key::KeyQ)) {
-            return false;
-        }
-
         if (!entry::pollEvents(m_width, m_height, m_debug, m_reset, &m_mouseState)) {
+            if (inputGetKeyState(entry::Key::KeyQ)) {
+                return false;
+            }
+
             imguiBeginFrame(m_mouseState.m_mx, m_mouseState.m_my,
                 (m_mouseState.m_buttons[entry::MouseButton::Left] ? IMGUI_MBUT_LEFT : 0) |
                     (m_mouseState.m_buttons[entry::MouseButton::Right] ? IMGUI_MBUT_RIGHT : 0) |
                     (m_mouseState.m_buttons[entry::MouseButton::Middle] ? IMGUI_MBUT_MIDDLE : 0),
                 m_mouseState.m_mz, uint16_t(m_width), uint16_t(m_height));
-            showExampleDialog(this);
+
+            showExampleDialog();
+
+            ImGui::SetNextWindowSize(ImVec2(100, 100), ImGuiCond_FirstUseEver);
+            ImGui::Begin("W1");
+            if (ImGui::Button("EXIT")) {
+                return false;
+            }
+            ImGui::End();
+
             imguiEndFrame();
 
             bgfx::setViewRect(0, 0, 0, uint16_t(m_width), uint16_t(m_height));

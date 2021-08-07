@@ -8,6 +8,7 @@
 #include <memory.h>
 
 #include "event_queue.hpp"
+#include "impl_at_platform.hpp"
 #include "input.hpp"
 #include "allocator/bxallocator.hpp"
 

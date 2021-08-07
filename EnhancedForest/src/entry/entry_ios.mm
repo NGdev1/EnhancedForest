@@ -289,21 +289,17 @@ static	void* m_device = NULL;
 
 // MARK: - View controller
 
-@interface ViewController : UIViewController {
-    View* m_view;
-}
+@interface ViewController : UIViewController
 @property (nonatomic, retain) View* m_view;
 @end
 
 @implementation ViewController
-    
-@synthesize m_view;
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        m_view = [ [View alloc] initWithFrame: [ [UIScreen mainScreen] bounds]];
+        _m_view = [ [View alloc] initWithFrame: [ [UIScreen mainScreen] bounds]];
     }
     return self;
 }
@@ -315,7 +311,7 @@ static	void* m_device = NULL;
 
 - (void)loadView
 {
-    self.view = m_view;
+    self.view = _m_view;
 }
 @end
 
