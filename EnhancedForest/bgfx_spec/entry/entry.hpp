@@ -11,26 +11,15 @@
 #include "base_enums.hpp"
 #include "window/window.hpp"
 
-extern "C" int startApp(int _argc, char **_argv);
-
-#define ENTRY_WINDOW_FLAG_NONE UINT32_C(0x00000000)
-#define ENTRY_WINDOW_FLAG_ASPECT_RATIO UINT32_C(0x00000001)
-#define ENTRY_WINDOW_FLAG_FRAME UINT32_C(0x00000002)
+extern int startApp(int _argc, char **_argv);
 
 namespace entry {
 
-bool pollEvents(uint32_t &_width, uint32_t &_height, uint32_t &_debug, uint32_t &_reset, MouseState *_mouse = NULL);
+void pollEvents(uint32_t &_width, uint32_t &_height, uint32_t &_debug, uint32_t &_reset, MouseState *_mouse = NULL);
 
-WindowHandle createWindow(
-    int32_t _x, int32_t _y, uint32_t _width, uint32_t _height, uint32_t _flags = ENTRY_WINDOW_FLAG_NONE, const char *_title = "");
-void destroyWindow(WindowHandle _handle);
-void setWindowPos(WindowHandle _handle, int32_t _x, int32_t _y);
-void setWindowSize(WindowHandle _handle, uint32_t _width, uint32_t _height);
-void setWindowTitle(WindowHandle _handle, const char *_title);
-void setWindowFlags(WindowHandle _handle, uint32_t _flags, bool _enabled);
-void toggleFullscreen(WindowHandle _handle);
-void setMouseLock(WindowHandle _handle, bool _lock);
-void setCurrentDir(const char *_dir);
+bool appShouldClose();
+
+void setAppShouldClose();
 
 class BX_NO_VTABLE AppI {
 public:
@@ -47,7 +36,7 @@ public:
     virtual int shutdown() = 0;
 
     ///
-    virtual bool update() = 0;
+    virtual void update() = 0;
 };
 
 ///

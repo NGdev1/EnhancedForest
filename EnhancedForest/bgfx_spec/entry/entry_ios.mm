@@ -86,7 +86,7 @@ namespace entry
 		}
 
 		MainThreadEntry* self = (MainThreadEntry*)_userData;
-		int32_t result = main(self->m_argc, self->m_argv);
+		int32_t result = runEntryMainThread(self->m_argc, self->m_argv);
 		return result;
 	}
 

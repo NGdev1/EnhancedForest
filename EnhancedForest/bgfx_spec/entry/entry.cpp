@@ -5,29 +5,26 @@
 //  Created by Admin on 31.07.2021.
 //
 
-#include <bgfx/bgfx.h>
-
-#include <time.h>
-
 #include "event_queue.hpp"
 #include "input.hpp"
 #include "filesystem/fileio.hpp"
 #include "allocator/bxallocator.hpp"
 
-extern "C" int32_t startApp(int32_t _argc, char **_argv);
+#include <bgfx/bgfx.h>
+
+extern int32_t startApp(int32_t _argc, char **_argv);
 
 namespace entry {
 
-static uint32_t s_debug = BGFX_DEBUG_NONE;
-static uint32_t s_reset = BGFX_RESET_NONE;
 static uint32_t s_width = ENTRY_DEFAULT_WIDTH;
 static uint32_t s_height = ENTRY_DEFAULT_HEIGHT;
+static bool s_appShouldClose = false;
+WindowState s_window[ENTRY_CONFIG_MAX_WINDOWS];
 
-static AppI *s_app = NULL;
+static uint32_t s_debug = BGFX_DEBUG_NONE;
+static uint32_t s_reset = BGFX_RESET_NONE;
 
-AppI::AppI() {
-    s_app = this;
-}
+AppI::AppI() {}
 
 AppI::~AppI() {}
 
@@ -38,13 +35,14 @@ int runApp(AppI *_app, int _argc, const char *const *_argv) {
     WindowHandle defaultWindow = {0};
     setWindowSize(defaultWindow, s_width, s_height);
 
-    while (_app->update())
-        ;
+    while (appShouldClose() == false) {
+        _app->update();
+    }
 
     return _app->shutdown();
 }
 
-int main(int _argc, const char *const *_argv) {
+int runEntryMainThread(int _argc, const char *const *_argv) {
     DBG(BX_COMPILER_NAME " / " BX_CPU_NAME " / " BX_ARCH_NAME " / " BX_PLATFORM_NAME);
 
     fileIoInit();
@@ -60,8 +58,7 @@ int main(int _argc, const char *const *_argv) {
         find = _argv[_argc - 1];
     }
 
-    int32_t result = bx::kExitSuccess;
-    result = ::startApp(_argc, (char **)_argv);
+    int32_t result = ::startApp(_argc, (char **)_argv);
 
     setCurrentDir("");
 
@@ -71,9 +68,15 @@ int main(int _argc, const char *const *_argv) {
     return result;
 }
 
-WindowState s_window[ENTRY_CONFIG_MAX_WINDOWS];
+bool appShouldClose() {
+    return s_appShouldClose;
+}
 
-bool pollEvents(uint32_t &_width, uint32_t &_height, uint32_t &_debug, uint32_t &_reset, MouseState *_mouse) {
+void setAppShouldClose() {
+    s_appShouldClose = true;
+}
+
+void pollEvents(uint32_t &_width, uint32_t &_height, uint32_t &_debug, uint32_t &_reset, MouseState *_mouse) {
     bool needReset = s_reset != _reset;
 
     s_debug = _debug;
@@ -110,8 +113,7 @@ bool pollEvents(uint32_t &_width, uint32_t &_height, uint32_t &_debug, uint32_t 
                 } break;
 
                 case Event::Exit:
-                    return true;
-
+                    s_appShouldClose = true;
                 case Event::Gamepad: {
                     //                        const GamepadEvent* gev = static_cast<const GamepadEvent*>(ev);
                     //                        DBG("gamepad %d, %d", gev->m_gamepad.idx, gev->m_connected);
@@ -187,8 +189,6 @@ bool pollEvents(uint32_t &_width, uint32_t &_height, uint32_t &_debug, uint32_t 
 
     s_width = _width;
     s_height = _height;
-
-    return false;
 }
 
 } // namespace entry

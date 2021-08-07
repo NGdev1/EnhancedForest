@@ -979,7 +979,7 @@ void setMouseLock(WindowHandle _handle, bool _lock) {
 
 int32_t MainThreadEntry::threadFunc(bx::Thread * /*_thread*/, void *_userData) {
     MainThreadEntry *self = (MainThreadEntry *)_userData;
-    int32_t result = main(self->m_argc, self->m_argv);
+    int32_t result = runEntryMainThread(self->m_argc, self->m_argv);
     PostMessage(s_ctx.m_hwnd[0], WM_QUIT, 0, 0);
     return result;
 }

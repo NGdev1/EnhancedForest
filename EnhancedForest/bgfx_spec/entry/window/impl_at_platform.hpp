@@ -32,7 +32,7 @@
 #endif // ...
 
 #ifndef ENTRY_CONFIG_MAX_WINDOWS
-#    define ENTRY_CONFIG_MAX_WINDOWS 8
+#    define ENTRY_CONFIG_MAX_WINDOWS 1
 #endif // ENTRY_CONFIG_MAX_WINDOWS
 
 #ifndef ENTRY_CONFIG_MAX_GAMEPADS
@@ -54,14 +54,35 @@
 #    define ENTRY_CONFIG_PROFILER 0
 #endif // ENTRY_CONFIG_PROFILER
 
+#define ENTRY_WINDOW_FLAG_NONE UINT32_C(0x00000000)
+#define ENTRY_WINDOW_FLAG_ASPECT_RATIO UINT32_C(0x00000001)
+#define ENTRY_WINDOW_FLAG_FRAME UINT32_C(0x00000002)
+
 namespace entry {
 
-int main(int _argc, const char *const *_argv);
+int runEntryMainThread(int _argc, const char *const *_argv);
 
 const Event *poll();
 
 const Event *poll(WindowHandle _handle);
 
 void release(const Event *_event);
+
+WindowHandle createWindow(
+    int32_t _x, int32_t _y, uint32_t _width, uint32_t _height, uint32_t _flags = ENTRY_WINDOW_FLAG_NONE, const char *_title = "");
+
+void destroyWindow(WindowHandle _handle);
+
+void setWindowPos(WindowHandle _handle, int32_t _x, int32_t _y);
+
+void setWindowSize(WindowHandle _handle, uint32_t _width, uint32_t _height);
+
+void setWindowTitle(WindowHandle _handle, const char *_title);
+
+void setWindowFlags(WindowHandle _handle, uint32_t _flags, bool _enabled);
+
+void toggleFullscreen(WindowHandle _handle);
+
+void setMouseLock(WindowHandle _handle, bool _lock);
 
 } // namespace entry

@@ -8,13 +8,9 @@
 #pragma once
 
 namespace bx {
-
 struct AllocatorI;
-
 }
 
 namespace entry {
-
 bx::AllocatorI *getAllocator();
-
 } // namespace entry

@@ -87,7 +87,7 @@ namespace entry
             }
 
             MainThreadEntry* self = (MainThreadEntry*)_userData;
-            uint32_t result = main(self->m_argc, self->m_argv);
+            uint32_t result = runEntryMainThread(self->m_argc, self->m_argv);
             dispatch_async(dispatch_get_main_queue(), ^{
                 [NSApp terminate:nil];
             });
@@ -97,6 +97,24 @@ namespace entry
 
     struct Context
     {
+        EventQueue m_eventQueue;
+        bx::Mutex m_lock;
+
+        bx::HandleAllocT<ENTRY_CONFIG_MAX_WINDOWS> m_windowAlloc;
+        NSWindow* m_window[ENTRY_CONFIG_MAX_WINDOWS];
+        NSRect m_windowFrame;
+
+        float   m_scrollf;
+        int32_t m_mx;
+        int32_t m_my;
+        int32_t m_scroll;
+        int32_t m_style;
+        bool    m_exit;
+
+        NSWindow* m_mouseLock;
+        int32_t m_cmx;
+        int32_t m_cmy;
+
         Context()
             : m_scrollf(0.0f)
             , m_mx(0)
@@ -562,24 +580,6 @@ namespace entry
             WindowHandle invalid = { UINT16_MAX };
             return invalid;
         }
-
-        EventQueue m_eventQueue;
-        bx::Mutex m_lock;
-
-        bx::HandleAllocT<ENTRY_CONFIG_MAX_WINDOWS> m_windowAlloc;
-        NSWindow* m_window[ENTRY_CONFIG_MAX_WINDOWS];
-        NSRect m_windowFrame;
-
-        float   m_scrollf;
-        int32_t m_mx;
-        int32_t m_my;
-        int32_t m_scroll;
-        int32_t m_style;
-        bool    m_exit;
-
-        NSWindow* m_mouseLock;
-        int32_t m_cmx;
-        int32_t m_cmy;
     };
 
     static Context s_ctx;

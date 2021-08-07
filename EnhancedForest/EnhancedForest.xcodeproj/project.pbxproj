@@ -15,7 +15,6 @@
 		84120D8126B5CD7E00B38B86 /* AssetsIOS.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84120D8026B5CD7E00B38B86 /* AssetsIOS.xcassets */; };
 		84120D9026B5D1CF00B38B86 /* entry_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84120D8E26B5D1CB00B38B86 /* entry_ios.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		84120D9126B5D1DB00B38B86 /* input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8492AEF426B52CD800D0B2EB /* input.cpp */; };
-		84120D9326B5D1DB00B38B86 /* entry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8492AEEE26B52C3B00D0B2EB /* entry.cpp */; };
 		84120D9426B5D1E500B38B86 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 845541DA26B5247500D18CC7 /* Application.cpp */; };
 		84120D9526B5D1E500B38B86 /* bgfx_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8492AEEB26B52A3F00D0B2EB /* bgfx_utils.cpp */; };
 		84120D9626B5D1E500B38B86 /* bounds.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8492AEE926B52A1B00D0B2EB /* bounds.cpp */; };
@@ -36,6 +35,7 @@
 		841686F826B5F34A00EB3BB9 /* example-glue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 841686F626B5F34A00EB3BB9 /* example-glue.cpp */; };
 		841686FF26B5F6E800EB3BB9 /* libdear-imgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FF710D26B525A10048DE6C /* libdear-imgui.a */; };
 		84263C0E26BDE9FE00D01719 /* bounds.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8492AEE926B52A1B00D0B2EB /* bounds.cpp */; };
+		84263C1B26BE72C600D01719 /* entry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8492AEEE26B52C3B00D0B2EB /* entry.cpp */; };
 		8433F1D626B5D64B004DAF14 /* libbgfx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FF710726B525A10048DE6C /* libbgfx.a */; };
 		8433F1E126B5D7D0004DAF14 /* libbx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FF710B26B525A10048DE6C /* libbx.a */; };
 		8433F1E426B5D88A004DAF14 /* libbimg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FF710926B525A10048DE6C /* libbimg.a */; };
@@ -979,7 +979,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84120D9526B5D1E500B38B86 /* bgfx_utils.cpp in Sources */,
-				84120D9326B5D1DB00B38B86 /* entry.cpp in Sources */,
 				8444364726BBF4B90001F5A4 /* entry_windows.cpp in Sources */,
 				84120D9426B5D1E500B38B86 /* Application.cpp in Sources */,
 				84120D9126B5D1DB00B38B86 /* input.cpp in Sources */,
@@ -987,6 +986,7 @@
 				84120D9626B5D1E500B38B86 /* bounds.cpp in Sources */,
 				841686F826B5F34A00EB3BB9 /* example-glue.cpp in Sources */,
 				84120D9026B5D1CF00B38B86 /* entry_ios.mm in Sources */,
+				84263C1B26BE72C600D01719 /* entry.cpp in Sources */,
 				841686EE26B5F04600EB3BB9 /* imgui.cpp in Sources */,
 				84B38AF226BD72C900880D84 /* fileio.cpp in Sources */,
 				84B38AF726BD737700880D84 /* bxallocator.cpp in Sources */,
