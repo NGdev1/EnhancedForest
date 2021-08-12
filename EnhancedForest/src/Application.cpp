@@ -7,11 +7,13 @@
 
 #include <stdio.h>
 #include <bx/uint32_t.h>
+// #include <bx/math.h>
 
 #include "bgfx_utils.hpp"
 #include "entry.hpp"
 #include "input.hpp"
 #include "imgui/imgui.h"
+#include "Common.h"
 
 class ExampleHelloWorld : public entry::AppI {
     entry::MouseState m_mouseState;
@@ -20,6 +22,12 @@ class ExampleHelloWorld : public entry::AppI {
     uint32_t m_height;
     uint32_t m_debug;
     uint32_t m_reset;
+
+    mat4 view;
+    mat4 projectionMatrix;
+    mat4 model;
+    vec3 clearColor;
+    vec3 translate;
 
 public:
     ExampleHelloWorld()

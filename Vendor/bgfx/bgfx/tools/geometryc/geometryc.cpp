@@ -55,7 +55,7 @@ namespace stl = tinystl;
 #include <bx/math.h>
 #include <bx/file.h>
 
-#include "bounds.h"
+#include "../../../../EnhancedForest/bgfx_spec/bounds.h"
 
 typedef stl::vector<bx::Vec3> Vec3Array;
 

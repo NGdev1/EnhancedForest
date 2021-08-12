@@ -270,6 +270,46 @@
 		811117695C6E4076B1C9315D /* Scan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA92F51198DC44DEBFA4873C /* Scan.cpp */; };
 		81A2B3D87056491CA8EDDA00 /* validate_logicals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0699B101BB904E10B45549FB /* validate_logicals.cpp */; };
 		83B739E293EE4FAA96377EE2 /* opt_algebraic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4C908CE5ED940B4AAF5BB02 /* opt_algebraic.cpp */; };
+		84263CD026C13F5700D01719 /* shaderc_metal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33223C40FCB5459D9E2E3B05 /* shaderc_metal.cpp */; };
+		84263CD126C13F5700D01719 /* shaderc_spirv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8971DA5FFD114889A6025C13 /* shaderc_spirv.cpp */; };
+		84263CD226C13F5700D01719 /* shaderc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A40D9337EF1418EB4213BD7 /* shaderc.cpp */; };
+		84263CD326C13F5700D01719 /* vertexlayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38B3057F13FC400CA35142F0 /* vertexlayout.cpp */; };
+		84263CD426C13F5700D01719 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB63EF2A4EB548D68A1397F9 /* shader.cpp */; };
+		84263CD526C13F5700D01719 /* shaderc_pssl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8AD8587823D24694A053D0A8 /* shaderc_pssl.cpp */; };
+		84263CD626C13F5700D01719 /* shaderc_glsl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F469351682B4350A5D8128B /* shaderc_glsl.cpp */; };
+		84263CD726C13F5700D01719 /* shaderc_hlsl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06CB5B20914B45A99877D5AE /* shaderc_hlsl.cpp */; };
+		84263CDA26C13F7800D01719 /* libbx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6383F73A1E2B4F7E8502CA38 /* libbx.a */; };
+		84263CDE26C1431200D01719 /* libbgfx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4B041B07294AC99251E28F /* libbgfx.a */; };
+		84263CE126C1440F00D01719 /* libbimg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2DBA44A3234F0DB03862B2 /* libbimg.a */; };
+		84263CE626C1448C00D01719 /* libglsl-optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C3382E73154BE6B73EDD5C /* libglsl-optimizer.a */; };
+		84263CEA26C1451B00D01719 /* libglslang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C58E2687624E24B2CD9745 /* libglslang.a */; };
+		84263CED26C147D800D01719 /* libspirv-tools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D3E06E7A714735A9774627 /* libspirv-tools.a */; };
+		84263CEE26C1497700D01719 /* libspirv-cross.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFB7DF4670B464990C0B839 /* libspirv-cross.a */; };
+		84263CF326C14A2300D01719 /* libmesa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA37629C67C94FE9907CF039 /* libmesa.a */; };
+		84263CF626C14A5800D01719 /* libglcpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6575DCCC80274E0199AE3AAE /* libglcpp.a */; };
+		84263CF926C14A7000D01719 /* libfcpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC02EC7A0B944169489651E /* libfcpp.a */; };
+		84263CFB26C14A8800D01719 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84263CFA26C14A8800D01719 /* Cocoa.framework */; };
+		84263D0826C18E4300D01719 /* texturec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A46BFA0748074B178C9923E8 /* texturec.cpp */; };
+		84263D0B26C18E5A00D01719 /* libbimg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2DBA44A3234F0DB03862B2 /* libbimg.a */; };
+		84263D0E26C18E8A00D01719 /* libbx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6383F73A1E2B4F7E8502CA38 /* libbx.a */; };
+		84263D0F26C18ED800D01719 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84263CFA26C14A8800D01719 /* Cocoa.framework */; };
+		84263D1226C18EFF00D01719 /* libastc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED406C59D9054CDBBAEDA2E9 /* libastc.a */; };
+		84263D1526C18F0800D01719 /* libetc1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AADA3247DCE247BA92B28C29 /* libetc1.a */; };
+		84263D1826C18F1100D01719 /* libetc2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF592DB5F9EF4C29BE18874F /* libetc2.a */; };
+		84263D1E26C18F6400D01719 /* libastc-codec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4647379B1B54959A3878694 /* libastc-codec.a */; };
+		84263D2126C18FC400D01719 /* libnvtt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8797A743499D4163BAA16CA7 /* libnvtt.a */; };
+		84263D2426C18FE700D01719 /* libedtaa3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC20B60983DC48E8AB3024AA /* libedtaa3.a */; };
+		84263D2726C1900400D01719 /* libsquish.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 294C5641E84447F9A5A4ADFC /* libsquish.a */; };
+		84263D2A26C1904800D01719 /* libpvrtc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1763FA09BC6427B917BD821 /* libpvrtc.a */; };
+		84263D2D26C1907800D01719 /* libiqa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B99402B9FFC421595518A1F /* libiqa.a */; };
+		84263D3026C190A800D01719 /* libtinyexr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D64F3863EC9840D9B465E7B0 /* libtinyexr.a */; };
+		84263D3C26C1913E00D01719 /* bounds.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02C521CA22204664BBAE65E7 /* bounds.cpp */; };
+		84263D3D26C1913E00D01719 /* vertexlayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C08177AC88094A68943C4DB0 /* vertexlayout.cpp */; };
+		84263D3E26C1913E00D01719 /* geometryc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F068694777D74B08AD984509 /* geometryc.cpp */; };
+		84263D4126C191FC00D01719 /* libbx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6383F73A1E2B4F7E8502CA38 /* libbx.a */; };
+		84263D4426C192C100D01719 /* libbgfx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4B041B07294AC99251E28F /* libbgfx.a */; };
+		84263D4726C19FAF00D01719 /* libmeshoptimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9545B15B1C4EC29A7AF977 /* libmeshoptimizer.a */; };
+		84263D4826C1B88200D01719 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84263CFA26C14A8800D01719 /* Cocoa.framework */; };
 		84989B40422349BFB4C8751A /* hash_table.c in Sources */ = {isa = PBXBuildFile; fileRef = F0F7DD7BDFEF47A99ADBC4C0 /* hash_table.c */; };
 		84FC4598C9DD463184F12FC5 /* reduction_pass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE823543B648E0A48637A4 /* reduction_pass.cpp */; };
 		85131608DC8C49E5A314FC52 /* avpcl_mode4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D2378F366E84436B64948AA /* avpcl_mode4.cpp */; };
@@ -682,6 +722,181 @@
 			remoteGlobalIDString = 7679BED9407D449CA922B5D5;
 			remoteInfo = bx;
 		};
+		84263CD826C13F7300D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7679BED9407D449CA922B5D5;
+			remoteInfo = bx;
+		};
+		84263CDC26C1430D00D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14D10A8AA9064669827B841C;
+			remoteInfo = bgfx;
+		};
+		84263CDF26C1440900D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F68EA6098D33432C91F91F55;
+			remoteInfo = bimg;
+		};
+		84263CE426C1448600D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F926893600674B10825DE545;
+			remoteInfo = "glsl-optimizer";
+		};
+		84263CE726C1451300D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6784E5D0301D42B5AF646E5E;
+			remoteInfo = glslang;
+		};
+		84263CEB26C147D100D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 910B9CF0BB5A48A1ABF444C4;
+			remoteInfo = "spirv-tools";
+		};
+		84263CEF26C1497D00D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C91E5118A0A493CBB95FFE4;
+			remoteInfo = "spirv-cross";
+		};
+		84263CF126C14A1E00D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF613B884E4243AFB7E18521;
+			remoteInfo = mesa;
+		};
+		84263CF426C14A5400D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53AF5492222645EC81BF9C20;
+			remoteInfo = glcpp;
+		};
+		84263CF726C14A6C00D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2D0E62859944D5BA666D784;
+			remoteInfo = fcpp;
+		};
+		84263D0926C18E5500D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F68EA6098D33432C91F91F55;
+			remoteInfo = bimg;
+		};
+		84263D0C26C18E8100D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7679BED9407D449CA922B5D5;
+			remoteInfo = bx;
+		};
+		84263D1026C18EF600D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E70070FBF034146A9391BEA;
+			remoteInfo = astc;
+		};
+		84263D1326C18F0400D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E081591C86F4057924D2FB1;
+			remoteInfo = etc1;
+		};
+		84263D1626C18F0D00D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D00131A6EB34B6D8DB453A2;
+			remoteInfo = etc2;
+		};
+		84263D1C26C18F6100D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F68F0842E8234D5E9E0A2532;
+			remoteInfo = "astc-codec";
+		};
+		84263D1F26C18FBF00D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E55A4C552EF54E3DB0921963;
+			remoteInfo = nvtt;
+		};
+		84263D2226C18FE400D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E31E4D02ACD843CCA591B3E4;
+			remoteInfo = edtaa3;
+		};
+		84263D2526C1900100D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 076E1A41D4864B2985293EFA;
+			remoteInfo = squish;
+		};
+		84263D2826C1904400D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9CE02E443864A86849FDC76;
+			remoteInfo = pvrtc;
+		};
+		84263D2B26C1907400D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4785EE9B697D4F9B8D87F5C8;
+			remoteInfo = iqa;
+		};
+		84263D2E26C190A300D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09E76CEAE82945448DA71A7E;
+			remoteInfo = tinyexr;
+		};
+		84263D3F26C191F800D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7679BED9407D449CA922B5D5;
+			remoteInfo = bx;
+		};
+		84263D4226C192BC00D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14D10A8AA9064669827B841C;
+			remoteInfo = bgfx;
+		};
+		84263D4526C19FA800D01719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50BE8986843B4DB58AEC2D5B;
+			remoteInfo = meshoptimizer;
+		};
 		8C10248082844609A86E6625 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F1663FD28BCE49AEBA143E05 /* Project object */;
@@ -830,6 +1045,36 @@
 			remoteInfo = meshoptimizer;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84263CC726C13F2C00D01719 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		84263CFF26C18E2700D01719 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		84263D3326C1911900D01719 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0032178FC29C4ABBA54526CE /* glcontext_egl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glcontext_egl.h; path = bgfx/src/glcontext_egl.h; sourceTree = SOURCE_ROOT; };
@@ -1283,6 +1528,10 @@
 		83B663C23B5E4ABD81AEF961 /* function.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = function.h; path = "bgfx/3rdparty/spirv-tools/source/val/function.h"; sourceTree = SOURCE_ROOT; };
 		83BBEB03BA104170B2807CDE /* spirv_cpp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = spirv_cpp.cpp; path = "bgfx/3rdparty/spirv-cross/spirv_cpp.cpp"; sourceTree = SOURCE_ROOT; };
 		83C22327E3B141F8A6F9D4D2 /* bit_vector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bit_vector.h; path = "bgfx/3rdparty/spirv-tools/source/util/bit_vector.h"; sourceTree = SOURCE_ROOT; };
+		84263CC926C13F2C00D01719 /* shaderc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = shaderc; sourceTree = BUILT_PRODUCTS_DIR; };
+		84263CFA26C14A8800D01719 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		84263D0126C18E2700D01719 /* texturec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = texturec; sourceTree = BUILT_PRODUCTS_DIR; };
+		84263D3526C1911900D01719 /* geometryc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = geometryc; sourceTree = BUILT_PRODUCTS_DIR; };
 		844D324CB9584D80B64CBFB6 /* validate_capability.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = validate_capability.cpp; path = "bgfx/3rdparty/spirv-tools/source/val/validate_capability.cpp"; sourceTree = SOURCE_ROOT; };
 		8457B71701E84D19997E3A65 /* hlslScanContext.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = hlslScanContext.cpp; path = bgfx/3rdparty/glslang/glslang/HLSL/hlslScanContext.cpp; sourceTree = SOURCE_ROOT; };
 		848AD8EC08464429A0D3BC5A /* loop_fission.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = loop_fission.cpp; path = "bgfx/3rdparty/spirv-tools/source/opt/loop_fission.cpp"; sourceTree = SOURCE_ROOT; };
@@ -1814,6 +2063,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84263CC626C13F2C00D01719 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84263CF926C14A7000D01719 /* libfcpp.a in Frameworks */,
+				84263CF626C14A5800D01719 /* libglcpp.a in Frameworks */,
+				84263CF326C14A2300D01719 /* libmesa.a in Frameworks */,
+				84263CFB26C14A8800D01719 /* Cocoa.framework in Frameworks */,
+				84263CEE26C1497700D01719 /* libspirv-cross.a in Frameworks */,
+				84263CED26C147D800D01719 /* libspirv-tools.a in Frameworks */,
+				84263CEA26C1451B00D01719 /* libglslang.a in Frameworks */,
+				84263CE626C1448C00D01719 /* libglsl-optimizer.a in Frameworks */,
+				84263CE126C1440F00D01719 /* libbimg.a in Frameworks */,
+				84263CDE26C1431200D01719 /* libbgfx.a in Frameworks */,
+				84263CDA26C13F7800D01719 /* libbx.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84263CFE26C18E2700D01719 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84263D3026C190A800D01719 /* libtinyexr.a in Frameworks */,
+				84263D2D26C1907800D01719 /* libiqa.a in Frameworks */,
+				84263D2A26C1904800D01719 /* libpvrtc.a in Frameworks */,
+				84263D2726C1900400D01719 /* libsquish.a in Frameworks */,
+				84263D2426C18FE700D01719 /* libedtaa3.a in Frameworks */,
+				84263D2126C18FC400D01719 /* libnvtt.a in Frameworks */,
+				84263D1E26C18F6400D01719 /* libastc-codec.a in Frameworks */,
+				84263D1826C18F1100D01719 /* libetc2.a in Frameworks */,
+				84263D1526C18F0800D01719 /* libetc1.a in Frameworks */,
+				84263D1226C18EFF00D01719 /* libastc.a in Frameworks */,
+				84263D0E26C18E8A00D01719 /* libbx.a in Frameworks */,
+				84263D0B26C18E5A00D01719 /* libbimg.a in Frameworks */,
+				84263D0F26C18ED800D01719 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84263D3226C1911900D01719 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84263D4826C1B88200D01719 /* Cocoa.framework in Frameworks */,
+				84263D4726C19FAF00D01719 /* libmeshoptimizer.a in Frameworks */,
+				84263D4426C192C100D01719 /* libbgfx.a in Frameworks */,
+				84263D4126C191FC00D01719 /* libbx.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86D7C392254A4508BCB49A5F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -2022,6 +2320,9 @@
 				43D3E06E7A714735A9774627 /* libspirv-tools.a */,
 				294C5641E84447F9A5A4ADFC /* libsquish.a */,
 				D64F3863EC9840D9B465E7B0 /* libtinyexr.a */,
+				84263CC926C13F2C00D01719 /* shaderc */,
+				84263D0126C18E2700D01719 /* texturec */,
+				84263D3526C1911900D01719 /* geometryc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2615,6 +2916,14 @@
 			name = "Source Files";
 			sourceTree = "<group>";
 		};
+		84263CE926C1451B00D01719 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84263CFA26C14A8800D01719 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8A57BADD2218481B9AC3BBCA /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -2946,7 +3255,7 @@
 			children = (
 				8174E1FEA1A64AD0909AEA00 /* bgfx */,
 				25B6604B0A934E4F9DE985FB /* Products */,
-				EF47467A5B234B80944C96D1 /* Frameworks */,
+				84263CE926C1451B00D01719 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -3341,13 +3650,6 @@
 			name = "Source Files";
 			sourceTree = "<group>";
 		};
-		EF47467A5B234B80944C96D1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		F1813A6E464B466787C0BF3D /* geometryv */ = {
 			isa = PBXGroup;
 			children = (
@@ -3666,6 +3968,82 @@
 			productReference = 6383F73A1E2B4F7E8502CA38 /* libbx.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		84263CC826C13F2C00D01719 /* shaderc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84263CCF26C13F2C00D01719 /* Build configuration list for PBXNativeTarget "shaderc" */;
+			buildPhases = (
+				84263CC526C13F2C00D01719 /* Sources */,
+				84263CC626C13F2C00D01719 /* Frameworks */,
+				84263CC726C13F2C00D01719 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84263CF826C14A6C00D01719 /* PBXTargetDependency */,
+				84263CF526C14A5400D01719 /* PBXTargetDependency */,
+				84263CF226C14A1E00D01719 /* PBXTargetDependency */,
+				84263CF026C1497D00D01719 /* PBXTargetDependency */,
+				84263CEC26C147D100D01719 /* PBXTargetDependency */,
+				84263CE826C1451300D01719 /* PBXTargetDependency */,
+				84263CE526C1448600D01719 /* PBXTargetDependency */,
+				84263CE026C1440900D01719 /* PBXTargetDependency */,
+				84263CDD26C1430D00D01719 /* PBXTargetDependency */,
+				84263CD926C13F7300D01719 /* PBXTargetDependency */,
+			);
+			name = shaderc;
+			productName = shaderc;
+			productReference = 84263CC926C13F2C00D01719 /* shaderc */;
+			productType = "com.apple.product-type.tool";
+		};
+		84263D0026C18E2700D01719 /* texturec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84263D0726C18E2700D01719 /* Build configuration list for PBXNativeTarget "texturec" */;
+			buildPhases = (
+				84263CFD26C18E2700D01719 /* Sources */,
+				84263CFE26C18E2700D01719 /* Frameworks */,
+				84263CFF26C18E2700D01719 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84263D2F26C190A300D01719 /* PBXTargetDependency */,
+				84263D2C26C1907400D01719 /* PBXTargetDependency */,
+				84263D2926C1904400D01719 /* PBXTargetDependency */,
+				84263D2626C1900100D01719 /* PBXTargetDependency */,
+				84263D2326C18FE400D01719 /* PBXTargetDependency */,
+				84263D2026C18FBF00D01719 /* PBXTargetDependency */,
+				84263D1D26C18F6100D01719 /* PBXTargetDependency */,
+				84263D1726C18F0D00D01719 /* PBXTargetDependency */,
+				84263D1426C18F0400D01719 /* PBXTargetDependency */,
+				84263D1126C18EF600D01719 /* PBXTargetDependency */,
+				84263D0D26C18E8100D01719 /* PBXTargetDependency */,
+				84263D0A26C18E5500D01719 /* PBXTargetDependency */,
+			);
+			name = texturec;
+			productName = texturec;
+			productReference = 84263D0126C18E2700D01719 /* texturec */;
+			productType = "com.apple.product-type.tool";
+		};
+		84263D3426C1911900D01719 /* geometryc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84263D3926C1911900D01719 /* Build configuration list for PBXNativeTarget "geometryc" */;
+			buildPhases = (
+				84263D3126C1911900D01719 /* Sources */,
+				84263D3226C1911900D01719 /* Frameworks */,
+				84263D3326C1911900D01719 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84263D4626C19FA800D01719 /* PBXTargetDependency */,
+				84263D4326C192BC00D01719 /* PBXTargetDependency */,
+				84263D4026C191F800D01719 /* PBXTargetDependency */,
+			);
+			name = geometryc;
+			productName = geometryc;
+			productReference = 84263D3526C1911900D01719 /* geometryc */;
+			productType = "com.apple.product-type.tool";
+		};
 		910B9CF0BB5A48A1ABF444C4 /* spirv-tools */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40EB5AE364484769A36EED15 /* Build configuration list for PBXNativeTarget "spirv-tools" */;
@@ -3831,6 +4209,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					84263CC826C13F2C00D01719 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					84263D0026C18E2700D01719 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					84263D3426C1911900D01719 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
 			};
 			buildConfigurationList = C849433B193B47DA973FCC20 /* Build configuration list for PBXProject "bgfx" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -3867,6 +4256,9 @@
 				910B9CF0BB5A48A1ABF444C4 /* spirv-tools */,
 				076E1A41D4864B2985293EFA /* squish */,
 				09E76CEAE82945448DA71A7E /* tinyexr */,
+				84263CC826C13F2C00D01719 /* shaderc */,
+				84263D0026C18E2700D01719 /* texturec */,
+				84263D3426C1911900D01719 /* geometryc */,
 			);
 		};
 /* End PBXProject section */
@@ -4381,6 +4773,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84263CC526C13F2C00D01719 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84263CD626C13F5700D01719 /* shaderc_glsl.cpp in Sources */,
+				84263CD526C13F5700D01719 /* shaderc_pssl.cpp in Sources */,
+				84263CD426C13F5700D01719 /* shader.cpp in Sources */,
+				84263CD226C13F5700D01719 /* shaderc.cpp in Sources */,
+				84263CD326C13F5700D01719 /* vertexlayout.cpp in Sources */,
+				84263CD726C13F5700D01719 /* shaderc_hlsl.cpp in Sources */,
+				84263CD026C13F5700D01719 /* shaderc_metal.cpp in Sources */,
+				84263CD126C13F5700D01719 /* shaderc_spirv.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84263CFD26C18E2700D01719 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84263D0826C18E4300D01719 /* texturec.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84263D3126C1911900D01719 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84263D3E26C1913E00D01719 /* geometryc.cpp in Sources */,
+				84263D3C26C1913E00D01719 /* bounds.cpp in Sources */,
+				84263D3D26C1913E00D01719 /* vertexlayout.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B303BF4E1B764AE4A1A21D57 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -4701,6 +5126,131 @@
 			target = 076E1A41D4864B2985293EFA /* squish */;
 			targetProxy = 956A9A52B6934959BF28A38E /* PBXContainerItemProxy */;
 		};
+		84263CD926C13F7300D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7679BED9407D449CA922B5D5 /* bx */;
+			targetProxy = 84263CD826C13F7300D01719 /* PBXContainerItemProxy */;
+		};
+		84263CDD26C1430D00D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14D10A8AA9064669827B841C /* bgfx */;
+			targetProxy = 84263CDC26C1430D00D01719 /* PBXContainerItemProxy */;
+		};
+		84263CE026C1440900D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F68EA6098D33432C91F91F55 /* bimg */;
+			targetProxy = 84263CDF26C1440900D01719 /* PBXContainerItemProxy */;
+		};
+		84263CE526C1448600D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F926893600674B10825DE545 /* glsl-optimizer */;
+			targetProxy = 84263CE426C1448600D01719 /* PBXContainerItemProxy */;
+		};
+		84263CE826C1451300D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6784E5D0301D42B5AF646E5E /* glslang */;
+			targetProxy = 84263CE726C1451300D01719 /* PBXContainerItemProxy */;
+		};
+		84263CEC26C147D100D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 910B9CF0BB5A48A1ABF444C4 /* spirv-tools */;
+			targetProxy = 84263CEB26C147D100D01719 /* PBXContainerItemProxy */;
+		};
+		84263CF026C1497D00D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C91E5118A0A493CBB95FFE4 /* spirv-cross */;
+			targetProxy = 84263CEF26C1497D00D01719 /* PBXContainerItemProxy */;
+		};
+		84263CF226C14A1E00D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF613B884E4243AFB7E18521 /* mesa */;
+			targetProxy = 84263CF126C14A1E00D01719 /* PBXContainerItemProxy */;
+		};
+		84263CF526C14A5400D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53AF5492222645EC81BF9C20 /* glcpp */;
+			targetProxy = 84263CF426C14A5400D01719 /* PBXContainerItemProxy */;
+		};
+		84263CF826C14A6C00D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2D0E62859944D5BA666D784 /* fcpp */;
+			targetProxy = 84263CF726C14A6C00D01719 /* PBXContainerItemProxy */;
+		};
+		84263D0A26C18E5500D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F68EA6098D33432C91F91F55 /* bimg */;
+			targetProxy = 84263D0926C18E5500D01719 /* PBXContainerItemProxy */;
+		};
+		84263D0D26C18E8100D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7679BED9407D449CA922B5D5 /* bx */;
+			targetProxy = 84263D0C26C18E8100D01719 /* PBXContainerItemProxy */;
+		};
+		84263D1126C18EF600D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E70070FBF034146A9391BEA /* astc */;
+			targetProxy = 84263D1026C18EF600D01719 /* PBXContainerItemProxy */;
+		};
+		84263D1426C18F0400D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E081591C86F4057924D2FB1 /* etc1 */;
+			targetProxy = 84263D1326C18F0400D01719 /* PBXContainerItemProxy */;
+		};
+		84263D1726C18F0D00D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D00131A6EB34B6D8DB453A2 /* etc2 */;
+			targetProxy = 84263D1626C18F0D00D01719 /* PBXContainerItemProxy */;
+		};
+		84263D1D26C18F6100D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F68F0842E8234D5E9E0A2532 /* astc-codec */;
+			targetProxy = 84263D1C26C18F6100D01719 /* PBXContainerItemProxy */;
+		};
+		84263D2026C18FBF00D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E55A4C552EF54E3DB0921963 /* nvtt */;
+			targetProxy = 84263D1F26C18FBF00D01719 /* PBXContainerItemProxy */;
+		};
+		84263D2326C18FE400D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E31E4D02ACD843CCA591B3E4 /* edtaa3 */;
+			targetProxy = 84263D2226C18FE400D01719 /* PBXContainerItemProxy */;
+		};
+		84263D2626C1900100D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 076E1A41D4864B2985293EFA /* squish */;
+			targetProxy = 84263D2526C1900100D01719 /* PBXContainerItemProxy */;
+		};
+		84263D2926C1904400D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9CE02E443864A86849FDC76 /* pvrtc */;
+			targetProxy = 84263D2826C1904400D01719 /* PBXContainerItemProxy */;
+		};
+		84263D2C26C1907400D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4785EE9B697D4F9B8D87F5C8 /* iqa */;
+			targetProxy = 84263D2B26C1907400D01719 /* PBXContainerItemProxy */;
+		};
+		84263D2F26C190A300D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09E76CEAE82945448DA71A7E /* tinyexr */;
+			targetProxy = 84263D2E26C190A300D01719 /* PBXContainerItemProxy */;
+		};
+		84263D4026C191F800D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7679BED9407D449CA922B5D5 /* bx */;
+			targetProxy = 84263D3F26C191F800D01719 /* PBXContainerItemProxy */;
+		};
+		84263D4326C192BC00D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14D10A8AA9064669827B841C /* bgfx */;
+			targetProxy = 84263D4226C192BC00D01719 /* PBXContainerItemProxy */;
+		};
+		84263D4626C19FA800D01719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50BE8986843B4DB58AEC2D5B /* meshoptimizer */;
+			targetProxy = 84263D4526C19FA800D01719 /* PBXContainerItemProxy */;
+		};
 		8449C5B15BC54902B90810C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4785EE9B697D4F9B8D87F5C8 /* iqa */;
@@ -4805,8 +5355,8 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/tinyexr/deps/miniz,
+					"${SRCROOT}/bimg/3rdparty",
+					"${SRCROOT}/bimg/3rdparty/tinyexr/deps/miniz",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -4839,12 +5389,12 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-tools/include",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-tools/source",
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glslang,
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Include,
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Public,
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty,
+					"${SRCROOT}/bgfx/3rdparty/spirv-tools/include",
+					"${SRCROOT}/bgfx/3rdparty/spirv-tools/source",
+					"${SRCROOT}/bgfx/3rdparty/glslang",
+					"${SRCROOT}/bgfx/3rdparty/glslang/glslang/Include",
+					"${SRCROOT}/bgfx/3rdparty/glslang/glslang/Public",
+					"${SRCROOT}/bgfx/3rdparty",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -4899,9 +5449,9 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include/compat/osx,
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bx/3rdparty",
+					"${SRCROOT}/bx/include/compat/osx",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -4933,7 +5483,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
+					"${SRCROOT}/bimg/3rdparty",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -4964,8 +5514,8 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/tinyexr/deps/miniz,
+					"${SRCROOT}/bimg/3rdparty",
+					"${SRCROOT}/bimg/3rdparty/tinyexr/deps/miniz",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5000,7 +5550,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
+					"${SRCROOT}/bimg/3rdparty",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5034,10 +5584,10 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include/compat/osx,
+					"${SRCROOT}/bimg/3rdparty",
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bx/3rdparty",
+					"${SRCROOT}/bx/include/compat/osx",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5071,7 +5621,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
+					"${SRCROOT}/bimg/3rdparty",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5104,11 +5654,11 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/include",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/mesa",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/mapi",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/glsl",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/include",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/mesa",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/mapi",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/glsl",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5147,14 +5697,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/dxsdk/include,
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/khronos,
-					/Users/admin/Downloads/bgfx.cmake/bgfx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include/compat/osx,
-					/Users/admin/Downloads/bgfx.cmake/bimg/include,
+					"${SRCROOT}/bgfx/3rdparty",
+					"${SRCROOT}/bgfx/3rdparty/dxsdk/include",
+					"${SRCROOT}/bgfx/3rdparty/khronos",
+					"${SRCROOT}/bgfx/include",
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bx/3rdparty",
+					"${SRCROOT}/bx/include/compat/osx",
+					"${SRCROOT}/bimg/include",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5192,7 +5742,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/fcpp,
+					"${SRCROOT}/bgfx/3rdparty/fcpp",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5229,16 +5779,16 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include/compat/osx,
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
-					"/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/astc-codec",
-					"/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/astc-codec/include",
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/iqa/include,
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/nvtt,
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/tinyexr/deps/miniz,
+					"${SRCROOT}/bimg/include",
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bx/3rdparty",
+					"${SRCROOT}/bx/include/compat/osx",
+					"${SRCROOT}/bimg/3rdparty",
+					"${SRCROOT}/3rdparty/astc-codec",
+					"${SRCROOT}/bimg/3rdparty/astc-codec/include",
+					"${SRCROOT}/bimg/3rdparty/iqa/include",
+					"${SRCROOT}/bimg/3rdparty/nvtt",
+					"${SRCROOT}/bimg/3rdparty/tinyexr/deps/miniz",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5272,11 +5822,11 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/include",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/mesa",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/mapi",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/glsl",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/include",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/mesa",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/mapi",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/glsl",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5326,9 +5876,9 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
-					"/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/astc-codec",
-					"/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/astc-codec/include",
+					"${SRCROOT}/bimg/3rdparty",
+					"${SRCROOT}/bimg/3rdparty/astc-codec",
+					"${SRCROOT}/bimg/3rdparty/astc-codec/include",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5363,7 +5913,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
+					"${SRCROOT}/bimg/3rdparty",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5397,7 +5947,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty,
+					"${SRCROOT}/bgfx/3rdparty",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5428,11 +5978,11 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/include",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/mesa",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/mapi",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/glsl",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/include",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/mesa",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/mapi",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/glsl",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5469,7 +6019,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/fcpp,
+					"${SRCROOT}/bgfx/3rdparty/fcpp",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5499,11 +6049,11 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/include",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/mesa",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/mapi",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/glsl",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/include",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/mesa",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/mapi",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/glsl",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5555,7 +6105,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/iqa/include,
+					"${SRCROOT}/bimg/3rdparty/iqa/include",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5587,12 +6137,12 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-tools/include",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-tools/source",
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glslang,
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Include,
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Public,
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty,
+					"${SRCROOT}/bgfx/3rdparty/spirv-tools/include",
+					"${SRCROOT}/bgfx/3rdparty/spirv-tools/source",
+					"${SRCROOT}/bgfx/3rdparty/glslang",
+					"${SRCROOT}/bgfx/3rdparty/glslang/glslang/Include",
+					"${SRCROOT}/bgfx/3rdparty/glslang/glslang/Public",
+					"${SRCROOT}/bgfx/3rdparty",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5641,11 +6191,11 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-headers/include",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-tools",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-tools/include",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-tools/include/generated",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-tools/source",
+					"${SRCROOT}/bgfx/3rdparty/spirv-headers/include",
+					"${SRCROOT}/bgfx/3rdparty/spirv-tools",
+					"${SRCROOT}/bgfx/3rdparty/spirv-tools/include",
+					"${SRCROOT}/bgfx/3rdparty/spirv-tools/include/generated",
+					"${SRCROOT}/bgfx/3rdparty/spirv-tools/source",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5698,13 +6248,13 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bgfx/examples/common,
-					/Users/admin/Downloads/bgfx.cmake/bgfx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include/compat/osx,
-					/Users/admin/Downloads/bgfx.cmake/bimg/include,
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty,
+					"${SRCROOT}/bgfx/examples/common",
+					"${SRCROOT}/bgfx/include",
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bx/3rdparty",
+					"${SRCROOT}bx/include/compat/osx",
+					"${SRCROOT}/bimg/include",
+					"${SRCROOT}/bgfx/3rdparty",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5735,7 +6285,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty,
+					"${SRCROOT}/bgfx/3rdparty",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5775,14 +6325,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/dxsdk/include,
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/khronos,
-					/Users/admin/Downloads/bgfx.cmake/bgfx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include/compat/osx,
-					/Users/admin/Downloads/bgfx.cmake/bimg/include,
+					"${SRCROOT}/bgfx/3rdparty",
+					"${SRCROOT}/bgfx/3rdparty/dxsdk/include",
+					"${SRCROOT}/bgfx/3rdparty/khronos",
+					"${SRCROOT}/bgfx/include",
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bx/3rdparty",
+					"${SRCROOT}/bx/include/compat/osx",
+					"${SRCROOT}/bimg/include",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5821,10 +6371,10 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include/compat/osx,
+					"${SRCROOT}/bgfx/3rdparty",
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bx/3rdparty",
+					"${SRCROOT}/bx/include/compat/osx",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5859,7 +6409,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
+					"${SRCROOT}/bimg/3rdparty",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5873,6 +6423,404 @@
 				WARNING_CFLAGS = "$(inherited)";
 			};
 			name = Debug;
+		};
+		84263CCD26C13F2C00D01719 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = NXAGVF2MTG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bx/3rdparty",
+					"${SRCROOT}/bgfx/3rdparty",
+					"${SRCROOT}/bgfx/include",
+					"${SRCROOT}/bimg/include",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/glsl",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/include",
+					"${SRCROOT}/bgfx/3rdparty/glslang/glslang/Public",
+					"${SRCROOT}/bgfx/3rdparty/glslang/glslang/Include",
+					"${SRCROOT}/bgfx/3rdparty/glslang",
+					"${SRCROOT}/bgfx/3rdparty/spirv-tools",
+					"${SRCROOT}/bgfx/3rdparty/spirv-tools/include",
+					"${SRCROOT}/bgfx/3rdparty/webgpu/include",
+					"${SRCROOT}/bgfx/3rdparty/fcpp",
+					"${SRCROOT}/bgfx/3rdparty/spirv-cross",
+					"${SRCROOT}/bgfx/3rdparty/spirv-cross/include",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		84263CCE26C13F2C00D01719 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = NXAGVF2MTG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bx/3rdparty",
+					"${SRCROOT}/bgfx/3rdparty",
+					"${SRCROOT}/bgfx/include",
+					"${SRCROOT}/bimg/include",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/glsl",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/include",
+					"${SRCROOT}/bgfx/3rdparty/glslang/glslang/Public",
+					"${SRCROOT}/bgfx/3rdparty/glslang/glslang/Include",
+					"${SRCROOT}/bgfx/3rdparty/glslang",
+					"${SRCROOT}/bgfx/3rdparty/spirv-tools",
+					"${SRCROOT}/bgfx/3rdparty/spirv-tools/include",
+					"${SRCROOT}/bgfx/3rdparty/webgpu/include",
+					"${SRCROOT}/bgfx/3rdparty/fcpp",
+					"${SRCROOT}/bgfx/3rdparty/spirv-cross",
+					"${SRCROOT}/bgfx/3rdparty/spirv-cross/include",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		84263D0526C18E2700D01719 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = NXAGVF2MTG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/bimg/include",
+					"${SRCROOT}/bx/include",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		84263D0626C18E2700D01719 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = NXAGVF2MTG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/bimg/include",
+					"${SRCROOT}/bx/include",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		84263D3A26C1911900D01719 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = NXAGVF2MTG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bgfx/include",
+					"${SRCROOT}/bgfx/3rdparty",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		84263D3B26C1911900D01719 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = NXAGVF2MTG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bgfx/include",
+					"${SRCROOT}/bgfx/3rdparty",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
 		};
 		9458109E60CD4FC79A7CB1D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5889,11 +6837,11 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-headers/include",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-tools",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-tools/include",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-tools/include/generated",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-tools/source",
+					"${SRCROOT}/bgfx/3rdparty/spirv-headers/include",
+					"${SRCROOT}/bgfx/3rdparty/spirv-tools",
+					"${SRCROOT}/bgfx/3rdparty/spirv-tools/include",
+					"${SRCROOT}/bgfx/3rdparty/spirv-tools/include/generated",
+					"${SRCROOT}/bgfx/3rdparty/spirv-tools/source",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5930,9 +6878,9 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include/compat/osx,
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bx/3rdparty",
+					"${SRCROOT}/bx/include/compat/osx",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -5967,7 +6915,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
+					"${SRCROOT}/bimg/3rdparty",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -6005,10 +6953,10 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include/compat/osx,
+					"${SRCROOT}/bgfx/3rdparty",
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bx/3rdparty",
+					"${SRCROOT}/bx/include/compat/osx",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -6039,11 +6987,11 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/include",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/mesa",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/mapi",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/glsl",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/include",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/mesa",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/mapi",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/glsl",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -6081,11 +7029,11 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/nvtt,
-					/Users/admin/Downloads/bgfx.cmake/bx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include/compat/osx,
+					"${SRCROOT}/bimg/3rdparty",
+					"${SRCROOT}/bimg/3rdparty/nvtt",
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bx/3rdparty",
+					"${SRCROOT}/bx/include/compat/osx",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -6120,13 +7068,13 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bgfx/examples/common,
-					/Users/admin/Downloads/bgfx.cmake/bgfx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include/compat/osx,
-					/Users/admin/Downloads/bgfx.cmake/bimg/include,
-					/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty,
+					"${SRCROOT}/bgfx/examples/common",
+					"${SRCROOT}/bgfx/include",
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bx/3rdparty",
+					"${SRCROOT}bx/include/compat/osx",
+					"${SRCROOT}/bimg/include",
+					"${SRCROOT}/bgfx/3rdparty",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -6160,7 +7108,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/iqa/include,
+					"${SRCROOT}/bimg/3rdparty/iqa/include",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -6208,7 +7156,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
+					"${SRCROOT}/bimg/3rdparty",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -6238,11 +7186,11 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/include",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/mesa",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/mapi",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src/glsl",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/glsl-optimizer/src",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/include",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/mesa",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/mapi",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src/glsl",
+					"${SRCROOT}/bgfx/3rdparty/glsl-optimizer/src",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -6276,7 +7224,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
+					"${SRCROOT}/bimg/3rdparty",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -6307,7 +7255,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
+					"${SRCROOT}/bimg/3rdparty",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -6341,9 +7289,9 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
-					"/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/astc-codec",
-					"/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/astc-codec/include",
+					"${SRCROOT}/bimg/3rdparty",
+					"${SRCROOT}/bimg/3rdparty/astc-codec",
+					"${SRCROOT}/bimg/3rdparty/astc-codec/include",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -6375,7 +7323,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
+					"${SRCROOT}/bimg/3rdparty",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -6412,16 +7360,16 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include/compat/osx,
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
-					"/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/astc-codec",
-					"/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/astc-codec/include",
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/iqa/include,
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/nvtt,
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/tinyexr/deps/miniz,
+					"${SRCROOT}/bimg/include",
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bx/3rdparty",
+					"${SRCROOT}/bx/include/compat/osx",
+					"${SRCROOT}/bimg/3rdparty",
+					"${SRCROOT}/3rdparty/astc-codec",
+					"${SRCROOT}/bimg/3rdparty/astc-codec/include",
+					"${SRCROOT}/bimg/3rdparty/iqa/include",
+					"${SRCROOT}/bimg/3rdparty/nvtt",
+					"${SRCROOT}/bimg/3rdparty/tinyexr/deps/miniz",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -6453,8 +7401,8 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-cross",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-cross/include",
+					"${SRCROOT}/bgfx/3rdparty/spirv-cross",
+					"${SRCROOT}/bgfx/3rdparty/spirv-cross/include",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -6488,10 +7436,10 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include/compat/osx,
+					"${SRCROOT}/bimg/3rdparty",
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bx/3rdparty",
+					"${SRCROOT}/bx/include/compat/osx",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -6525,11 +7473,11 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bimg/3rdparty/nvtt,
-					/Users/admin/Downloads/bgfx.cmake/bx/include,
-					/Users/admin/Downloads/bgfx.cmake/bx/3rdparty,
-					/Users/admin/Downloads/bgfx.cmake/bx/include/compat/osx,
+					"${SRCROOT}/bimg/3rdparty",
+					"${SRCROOT}/bimg/3rdparty/nvtt",
+					"${SRCROOT}/bx/include",
+					"${SRCROOT}/bx/3rdparty",
+					"${SRCROOT}/bx/include/compat/osx",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -6563,8 +7511,8 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-cross",
-					"/Users/admin/Downloads/bgfx.cmake/bgfx/3rdparty/spirv-cross/include",
+					"${SRCROOT}/bgfx/3rdparty/spirv-cross",
+					"${SRCROOT}/bgfx/3rdparty/spirv-cross/include",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "";
@@ -6680,6 +7628,33 @@
 			buildConfigurations = (
 				5DF2976D60D4432DB0E28077 /* Debug */,
 				CF98DDC795F94D5B82474964 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		84263CCF26C13F2C00D01719 /* Build configuration list for PBXNativeTarget "shaderc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84263CCD26C13F2C00D01719 /* Debug */,
+				84263CCE26C13F2C00D01719 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		84263D0726C18E2700D01719 /* Build configuration list for PBXNativeTarget "texturec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84263D0526C18E2700D01719 /* Debug */,
+				84263D0626C18E2700D01719 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		84263D3926C1911900D01719 /* Build configuration list for PBXNativeTarget "geometryc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84263D3A26C1911900D01719 /* Debug */,
+				84263D3B26C1911900D01719 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
