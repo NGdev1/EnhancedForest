@@ -1,5 +1,5 @@
 //
-//  Mesh.hpp
+//  CoreMesh.hpp
 //  Neverland
 //
 //  Created by Admin on 13.07.2021.
@@ -15,15 +15,14 @@
 #include "Shader.hpp"
 #include "Common.h"
 
-class Mesh {
+class CoreMesh {
     IndexBuffer ib;
     VertexBuffer vb;
-    Shader shader;
+    Shader *shader;
     std::vector<Texture *> textures;
 
 public:
-    Mesh(Vertex *vertices, unsigned int verticesCount, unsigned int *indices, unsigned int indicesCount, std::vector<Texture *> texutres,
-        Shader &shader);
-    ~Mesh();
+    CoreMesh(Vertex *vertices, int verticesCount, uint16_t *indices, int indicesCount, std::vector<Texture *> texutres, Shader *shader);
+    ~CoreMesh();
     void draw();
 };

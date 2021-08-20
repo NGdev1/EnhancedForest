@@ -8,8 +8,6 @@
 #include "Texture.hpp"
 #include "bgfx_utils.hpp"
 
-#include <iostream>
-
 Texture::Texture(const std::string &path)
     : m_handle(loadTexture(path.c_str())) {}
 

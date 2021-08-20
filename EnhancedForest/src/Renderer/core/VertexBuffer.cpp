@@ -7,10 +7,12 @@
 
 #include "VertexBuffer.hpp"
 
-VertexBuffer::VertexBuffer(Vertex *vertices, unsigned int verticesCount) {
+VertexBuffer::VertexBuffer(Vertex *vertices, int verticesCount) {
     bgfx::VertexLayout layout;
+    layout.begin();
     layout.add(bgfx::Attrib::Position, 3, bgfx::AttribType::Float);
-    layout.add(bgfx::Attrib::TexCoord0, 4, bgfx::AttribType::Float);
+    layout.add(bgfx::Attrib::TexCoord0, 2, bgfx::AttribType::Float);
+    layout.end();
 
     int size = sizeof(Vertex) * verticesCount;
     m_handle = bgfx::createVertexBuffer(bgfx::makeRef(vertices, size), layout);

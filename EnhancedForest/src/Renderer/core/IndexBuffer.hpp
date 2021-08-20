@@ -15,7 +15,7 @@ private:
     unsigned int m_size;
 
 public:
-    IndexBuffer(unsigned int *data, unsigned int count);
+    IndexBuffer(uint16_t *data, int count);
     ~IndexBuffer();
 
     void bind() const;

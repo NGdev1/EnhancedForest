@@ -7,9 +7,9 @@
 
 #include "IndexBuffer.hpp"
 
-IndexBuffer::IndexBuffer(unsigned int *data, unsigned int count)
+IndexBuffer::IndexBuffer(uint16_t *data, int count)
     : m_size(count)
-    , m_handle(bgfx::createIndexBuffer(bgfx::makeRef(data, sizeof(unsigned int) * count))) {}
+    , m_handle(bgfx::createIndexBuffer(bgfx::makeRef(data, sizeof(uint16_t) * count))) {}
 
 IndexBuffer::~IndexBuffer() {
     bgfx::destroy(m_handle);

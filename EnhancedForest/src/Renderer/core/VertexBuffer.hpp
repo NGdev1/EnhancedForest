@@ -16,7 +16,7 @@ private:
     bgfx::VertexBufferHandle m_handle;
 
 public:
-    VertexBuffer(Vertex *vertices, unsigned int verticesCount);
+    VertexBuffer(Vertex *vertices, int verticesCount);
     ~VertexBuffer();
 
     void bind() const;
