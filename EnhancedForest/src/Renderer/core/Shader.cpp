@@ -11,10 +11,15 @@
 #include "bgfx_utils.hpp"
 #include "Shader.hpp"
 
+namespace ef {
+
 Shader::Shader(const char *vertexPath, const char *fragmentPath)
     : m_handle(loadProgram(vertexPath, fragmentPath)) {}
 
 Shader::~Shader() {
+    for (auto &item : m_uniformLocationCache) {
+        bgfx::destroy(item.second);
+    }
     bgfx::destroy(m_handle);
 }
 
@@ -54,3 +59,5 @@ bgfx::UniformHandle Shader::getUniformLocation(const std::string &name, const bg
     m_uniformLocationCache[name] = location;
     return location;
 }
+
+} // namespace ef

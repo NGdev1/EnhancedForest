@@ -1,11 +1,13 @@
 //
-//  Common.h
+//  Vertex.h
 //  EnhancedForest
 //
 //  Created by Admin on 12.08.2021.
 //
 
 #pragma once
+
+namespace ef {
 
 struct vec2 {
     float x, y;
@@ -75,3 +77,5 @@ struct Vertex {
         : Position(aPosition)
         , TexCoords(aTexCoords){};
 };
+
+} // namespace ef

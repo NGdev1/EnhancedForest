@@ -10,6 +10,8 @@
 #include <string>
 #include <bgfx/bgfx.h>
 
+namespace ef {
+
 class Texture {
 private:
     bgfx::TextureHandle m_handle;
@@ -20,3 +22,5 @@ public:
 
     bgfx::TextureHandle getHandle();
 };
+
+} // namespace ef

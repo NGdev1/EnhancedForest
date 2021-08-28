@@ -8,6 +8,8 @@
 #include "Texture.hpp"
 #include "bgfx_utils.hpp"
 
+namespace ef {
+
 Texture::Texture(const std::string &path)
     : m_handle(loadTexture(path.c_str())) {}
 
@@ -18,3 +20,5 @@ Texture::~Texture() {
 bgfx::TextureHandle Texture::getHandle() {
     return m_handle;
 }
+
+} // namespace ef

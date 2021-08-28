@@ -65,10 +65,12 @@
 		8453C5BA26B5D42C00B8B839 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8453C5B826B5D42900B8B839 /* LaunchScreen.storyboard */; };
 		845541DB26B5247500D18CC7 /* AssetsOSX.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845541D726B5247500D18CC7 /* AssetsOSX.xcassets */; };
 		845541DD26B5247500D18CC7 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 845541DA26B5247500D18CC7 /* Application.cpp */; };
-		845A64FD26C4FE1200A78D7F /* arbuz1.png in Resources */ = {isa = PBXBuildFile; fileRef = 845A64FC26C4FE1200A78D7F /* arbuz1.png */; };
-		845A64FE26C4FE1200A78D7F /* arbuz1.png in Resources */ = {isa = PBXBuildFile; fileRef = 845A64FC26C4FE1200A78D7F /* arbuz1.png */; };
 		845A650326C5BBF600A78D7F /* shaders in Resources */ = {isa = PBXBuildFile; fileRef = 845A650226C5BBF600A78D7F /* shaders */; };
 		845A650526C5BC0300A78D7F /* shaders in Resources */ = {isa = PBXBuildFile; fileRef = 845A650426C5BC0300A78D7F /* shaders */; };
+		847BF34626D42B060037E8BF /* textures in Resources */ = {isa = PBXBuildFile; fileRef = 847BF34526D42B060037E8BF /* textures */; };
+		847BF34726D42B060037E8BF /* textures in Resources */ = {isa = PBXBuildFile; fileRef = 847BF34526D42B060037E8BF /* textures */; };
+		847BF35026D447A00037E8BF /* libglm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 847BF34D26D4471E0037E8BF /* libglm.a */; };
+		847BF35326D447AD0037E8BF /* libglm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 847BF34D26D4471E0037E8BF /* libglm.a */; };
 		8492AEEC26B52A3F00D0B2EB /* bgfx_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8492AEEB26B52A3F00D0B2EB /* bgfx_utils.cpp */; };
 		8492AEEF26B52C3B00D0B2EB /* entry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8492AEEE26B52C3B00D0B2EB /* entry.cpp */; };
 		8492AEF626B52CD800D0B2EB /* input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8492AEF426B52CD800D0B2EB /* input.cpp */; };
@@ -181,6 +183,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 09E76CEAE82945448DA71A7E;
 			remoteInfo = tinyexr;
+		};
+		847BF34C26D4471E0037E8BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 847BF34826D4471E0037E8BF /* glm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ED8C157052A04F44B8281FB4;
+			remoteInfo = glm;
+		};
+		847BF34E26D447990037E8BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 847BF34826D4471E0037E8BF /* glm.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C43CE40BAFD40989B7BFB16;
+			remoteInfo = glm;
+		};
+		847BF35126D447A50037E8BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 847BF34826D4471E0037E8BF /* glm.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C43CE40BAFD40989B7BFB16;
+			remoteInfo = glm;
 		};
 		8492AEF726B52D3200D0B2EB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -427,10 +450,11 @@
 		845541D726B5247500D18CC7 /* AssetsOSX.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AssetsOSX.xcassets; sourceTree = "<group>"; };
 		845541D826B5247500D18CC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845541DA26B5247500D18CC7 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
-		845A64F926C4EE4900A78D7F /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		845A64FC26C4FE1200A78D7F /* arbuz1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arbuz1.png; sourceTree = "<group>"; };
+		845A64F926C4EE4900A78D7F /* Vertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
 		845A650226C5BBF600A78D7F /* shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; path = shaders; sourceTree = "<group>"; };
 		845A650426C5BC0300A78D7F /* shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; path = shaders; sourceTree = "<group>"; };
+		847BF34526D42B060037E8BF /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = textures; sourceTree = "<group>"; };
+		847BF34826D4471E0037E8BF /* glm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = glm.xcodeproj; path = ../Vendor/glm/glm.xcodeproj; sourceTree = "<group>"; };
 		8492AEE526B5294200D0B2EB /* entry.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = entry.hpp; sourceTree = "<group>"; };
 		8492AEE626B5299300D0B2EB /* dbg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = dbg.hpp; sourceTree = "<group>"; };
 		8492AEE726B529CC00D0B2EB /* bgfx_utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = bgfx_utils.hpp; sourceTree = "<group>"; };
@@ -463,6 +487,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847BF35326D447AD0037E8BF /* libglm.a in Frameworks */,
 				8433F1F826B5EDF1004DAF14 /* OpenGLES.framework in Frameworks */,
 				8433F1F726B5EDE8004DAF14 /* Metal.framework in Frameworks */,
 				8433F1F626B5EDDF004DAF14 /* UIKit.framework in Frameworks */,
@@ -481,6 +506,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847BF35026D447A00037E8BF /* libglm.a in Frameworks */,
 				841686F526B5F06900EB3BB9 /* libdear-imgui.a in Frameworks */,
 				84120D1126B5637D00B38B86 /* libtinyexr.a in Frameworks */,
 				84120D0C26B5633F00B38B86 /* QuartzCore.framework in Frameworks */,
@@ -568,7 +594,7 @@
 				84263C8B26C1078100D01719 /* VertexBuffer.cpp */,
 				84263C8D26C1078100D01719 /* IndexBuffer.hpp */,
 				84263C9826C1078100D01719 /* IndexBuffer.cpp */,
-				845A64F926C4EE4900A78D7F /* Common.h */,
+				845A64F926C4EE4900A78D7F /* Vertex.h */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -576,7 +602,7 @@
 		84263D4926C27F7E00D01719 /* Resources-common */ = {
 			isa = PBXGroup;
 			children = (
-				845A64FC26C4FE1200A78D7F /* arbuz1.png */,
+				847BF34526D42B060037E8BF /* textures */,
 			);
 			path = "Resources-common";
 			sourceTree = "<group>";
@@ -599,6 +625,14 @@
 				845541DA26B5247500D18CC7 /* Application.cpp */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		847BF34926D4471E0037E8BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				847BF34D26D4471E0037E8BF /* libglm.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		8492AEE426B5293800D0B2EB /* entry */ = {
@@ -691,6 +725,7 @@
 		84FF70E726B525960048DE6C /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				847BF34826D4471E0037E8BF /* glm.xcodeproj */,
 				84FF70E826B525A10048DE6C /* bgfx.xcodeproj */,
 			);
 			name = Projects;
@@ -775,6 +810,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				847BF35226D447A50037E8BF /* PBXTargetDependency */,
 				8433F1EE26B5D93E004DAF14 /* PBXTargetDependency */,
 				8433F1EB26B5D908004DAF14 /* PBXTargetDependency */,
 				8433F1E826B5D8CD004DAF14 /* PBXTargetDependency */,
@@ -800,6 +836,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				847BF34F26D447990037E8BF /* PBXTargetDependency */,
 				841686F426B5F06600EB3BB9 /* PBXTargetDependency */,
 				84120D1026B5637700B38B86 /* PBXTargetDependency */,
 				84120D0926B548EB00B38B86 /* PBXTargetDependency */,
@@ -845,6 +882,10 @@
 					ProductGroup = 84FF70E926B525A10048DE6C /* Products */;
 					ProjectRef = 84FF70E826B525A10048DE6C /* bgfx.xcodeproj */;
 				},
+				{
+					ProductGroup = 847BF34926D4471E0037E8BF /* Products */;
+					ProjectRef = 847BF34826D4471E0037E8BF /* glm.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -874,6 +915,13 @@
 			fileType = "compiled.mach-o.executable";
 			path = geometryc;
 			remoteRef = 84263D6326C27F7E00D01719 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		847BF34D26D4471E0037E8BF /* libglm.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libglm.a;
+			remoteRef = 847BF34C26D4471E0037E8BF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		84FF710326B525A10048DE6C /* libastc.a */ = {
@@ -1046,7 +1094,7 @@
 			files = (
 				841686EC26B5F04600EB3BB9 /* varying.def.sc in Resources */,
 				841686F026B5F04600EB3BB9 /* vs_ocornut_imgui.sc in Resources */,
-				845A64FE26C4FE1200A78D7F /* arbuz1.png in Resources */,
+				847BF34726D42B060037E8BF /* textures in Resources */,
 				84120D8126B5CD7E00B38B86 /* AssetsIOS.xcassets in Resources */,
 				8453C5BA26B5D42C00B8B839 /* LaunchScreen.storyboard in Resources */,
 				841686EA26B5F04600EB3BB9 /* vs_imgui_image.sc in Resources */,
@@ -1064,9 +1112,9 @@
 				841686E926B5F04600EB3BB9 /* vs_imgui_image.sc in Resources */,
 				845541DB26B5247500D18CC7 /* AssetsOSX.xcassets in Resources */,
 				841686F126B5F04600EB3BB9 /* fs_ocornut_imgui.sc in Resources */,
+				847BF34626D42B060037E8BF /* textures in Resources */,
 				841686EB26B5F04600EB3BB9 /* varying.def.sc in Resources */,
 				845A650326C5BBF600A78D7F /* shaders in Resources */,
-				845A64FD26C4FE1200A78D7F /* arbuz1.png in Resources */,
 				841686EF26B5F04600EB3BB9 /* vs_ocornut_imgui.sc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1203,6 +1251,16 @@
 			name = tinyexr;
 			targetProxy = 8433F1ED26B5D93E004DAF14 /* PBXContainerItemProxy */;
 		};
+		847BF34F26D447990037E8BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = glm;
+			targetProxy = 847BF34E26D447990037E8BF /* PBXContainerItemProxy */;
+		};
+		847BF35226D447A50037E8BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = glm;
+			targetProxy = 847BF35126D447A50037E8BF /* PBXContainerItemProxy */;
+		};
 		8492AEF826B52D3200D0B2EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = bx;
@@ -1276,13 +1334,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"${SRCROOT}/../Vendor/bgfx/bgfx/include",
-					"${SRCROOT}/../Vendor/bgfx/bx/include",
-					"${SRCROOT}/../Vendor/bgfx/bimg/include",
-					"${SRCROOT}/../Vendor/bgfx/bgfx/3rdparty",
-					"${SRCROOT}/bgfx_spec",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/Resources-osx/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1349,13 +1400,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"${SRCROOT}/../Vendor/bgfx/bgfx/include",
-					"${SRCROOT}/../Vendor/bgfx/bx/include",
-					"${SRCROOT}/../Vendor/bgfx/bimg/include",
-					"${SRCROOT}/../Vendor/bgfx/bgfx/3rdparty",
-					"${SRCROOT}/bgfx_spec",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/Resources-osx/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1375,6 +1419,14 @@
 		84B09A6A26B5231900A65A74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/../Vendor/bgfx/bgfx/include",
+					"${SRCROOT}/../Vendor/bgfx/bx/include",
+					"${SRCROOT}/../Vendor/bgfx/bimg/include",
+					"${SRCROOT}/../Vendor/bgfx/bgfx/3rdparty",
+					"${SRCROOT}/bgfx_spec",
+					"${SRCROOT}/../Vendor/glm",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				OBJROOT = "${SRCROOT}/bin-int";
 				SYMROOT = "${SRCROOT}/bin";
@@ -1384,6 +1436,14 @@
 		84B09A6B26B5231900A65A74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/../Vendor/bgfx/bgfx/include",
+					"${SRCROOT}/../Vendor/bgfx/bx/include",
+					"${SRCROOT}/../Vendor/bgfx/bimg/include",
+					"${SRCROOT}/../Vendor/bgfx/bgfx/3rdparty",
+					"${SRCROOT}/bgfx_spec",
+					"${SRCROOT}/../Vendor/glm",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				OBJROOT = "${SRCROOT}/bin-int";
 				SYMROOT = "${SRCROOT}/bin";
@@ -1448,13 +1508,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"${SRCROOT}/../Vendor/bgfx/bgfx/include",
-					"${SRCROOT}/../Vendor/bgfx/bx/include",
-					"${SRCROOT}/../Vendor/bgfx/bimg/include",
-					"${SRCROOT}/../Vendor/bgfx/bgfx/3rdparty",
-					"${SRCROOT}/bgfx_spec",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/Resources-osx/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1522,13 +1575,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"${SRCROOT}/../Vendor/bgfx/bgfx/include",
-					"${SRCROOT}/../Vendor/bgfx/bx/include",
-					"${SRCROOT}/../Vendor/bgfx/bimg/include",
-					"${SRCROOT}/../Vendor/bgfx/bgfx/3rdparty",
-					"${SRCROOT}/bgfx_spec",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/Resources-osx/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

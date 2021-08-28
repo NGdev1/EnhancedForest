@@ -11,6 +11,8 @@
 #include <unordered_map>
 #include <bx/bx.h>
 
+namespace ef {
+
 class Shader {
 public:
     Shader(const char *vertexPath, const char *fragmentPath);
@@ -27,3 +29,5 @@ private:
     std::unordered_map<std::string, bgfx::UniformHandle> m_uniformLocationCache;
     bgfx::UniformHandle getUniformLocation(const std::string &name, const bgfx::UniformType::Enum type);
 };
+
+} // namespace ef

@@ -7,15 +7,25 @@
 
 #pragma once
 
-#include "Common.h"
+#include <glm/glm.hpp>
 
-enum CameraMovement { FORWARD, BACKWARD, LEFT, RIGHT };
+namespace ef {
 
 class Camera {
-    vec3 position;
-    vec2 rotation;
+    void updateVectors();
 
 public:
-    Camera();
-    mat4 getViewMatrix();
+    glm::vec3 front;
+    glm::vec3 up;
+    glm::vec3 right;
+
+    glm::vec3 position;
+    glm::mat4 rotation;
+    Camera(glm::vec3 position);
+
+    void rotate(float x, float y, float z);
+
+    glm::mat4 getView();
 };
+
+} // namespace ef

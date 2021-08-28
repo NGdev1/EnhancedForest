@@ -7,6 +7,8 @@
 
 #include "IndexBuffer.hpp"
 
+namespace ef {
+
 IndexBuffer::IndexBuffer(uint16_t *data, int count)
     : m_size(count)
     , m_handle(bgfx::createIndexBuffer(bgfx::makeRef(data, sizeof(uint16_t) * count))) {}
@@ -26,3 +28,5 @@ void IndexBuffer::unbind() const {
 unsigned int IndexBuffer::getSize() const {
     return m_size;
 }
+
+} // namespace ef

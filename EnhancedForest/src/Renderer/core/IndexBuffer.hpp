@@ -9,6 +9,8 @@
 
 #include <bgfx/bgfx.h>
 
+namespace ef {
+
 class IndexBuffer {
 private:
     bgfx::IndexBufferHandle m_handle;
@@ -22,3 +24,5 @@ public:
     void unbind() const;
     unsigned int getSize() const;
 };
+
+} // namespace ef

@@ -13,16 +13,20 @@
 #include "VertexBuffer.hpp"
 #include "Texture.hpp"
 #include "Shader.hpp"
-#include "Common.h"
+#include "Vertex.h"
+
+namespace ef {
 
 class CoreMesh {
     IndexBuffer ib;
     VertexBuffer vb;
     Shader *shader;
-    std::vector<Texture *> textures;
+    Texture *texture;
 
 public:
-    CoreMesh(Vertex *vertices, int verticesCount, uint16_t *indices, int indicesCount, std::vector<Texture *> texutres, Shader *shader);
+    CoreMesh(Vertex *vertices, int verticesCount, uint16_t *indices, int indicesCount, Texture *texutre, Shader *shader);
     ~CoreMesh();
     void draw();
 };
+
+} // namespace ef

@@ -7,6 +7,8 @@
 
 #include "VertexBuffer.hpp"
 
+namespace ef {
+
 VertexBuffer::VertexBuffer(Vertex *vertices, int verticesCount) {
     bgfx::VertexLayout layout;
     layout.begin();
@@ -14,7 +16,7 @@ VertexBuffer::VertexBuffer(Vertex *vertices, int verticesCount) {
     layout.add(bgfx::Attrib::TexCoord0, 2, bgfx::AttribType::Float);
     layout.end();
 
-    int size = sizeof(Vertex) * verticesCount;
+    int size = sizeof(ef::Vertex) * verticesCount;
     m_handle = bgfx::createVertexBuffer(bgfx::makeRef(vertices, size), layout);
 }
 
@@ -29,3 +31,5 @@ void VertexBuffer::bind() const {
 void VertexBuffer::unbind() const {
     bgfx::setVertexBuffer(0, 0);
 }
+
+} // namespace ef

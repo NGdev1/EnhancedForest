@@ -7,9 +7,11 @@
 
 #pragma once
 
-#include "Common.h"
+#include "Vertex.h"
 
 #include <bgfx/bgfx.h>
+
+namespace ef {
 
 class VertexBuffer {
 private:
@@ -22,3 +24,5 @@ public:
     void bind() const;
     void unbind() const;
 };
+
+} // namespace ef

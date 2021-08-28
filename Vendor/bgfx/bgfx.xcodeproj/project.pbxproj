@@ -5707,6 +5707,7 @@
 					"${SRCROOT}/bimg/include",
 					"$(inherited)",
 				);
+				INFOPLIST_OUTPUT_FORMAT = binary;
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -6335,6 +6336,7 @@
 					"${SRCROOT}/bimg/include",
 					"$(inherited)",
 				);
+				INFOPLIST_OUTPUT_FORMAT = binary;
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
 				OTHER_CPLUSPLUSFLAGS = (
