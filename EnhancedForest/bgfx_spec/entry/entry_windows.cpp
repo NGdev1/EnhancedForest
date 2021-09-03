@@ -5,7 +5,7 @@
 //  Created by Admin on 05.08.2021.
 //
 
-#include "event_queue.hpp"
+#include "events/event_queue.hpp"
 
 #if ENTRY_CONFIG_USE_NATIVE && BX_PLATFORM_WINDOWS
 

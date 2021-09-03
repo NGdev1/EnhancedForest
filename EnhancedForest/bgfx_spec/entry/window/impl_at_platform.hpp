@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "events.hpp"
+#include "../events/events.hpp"
 
 #ifndef ENTRY_CONFIG_USE_NOOP
 #    define ENTRY_CONFIG_USE_NOOP 0

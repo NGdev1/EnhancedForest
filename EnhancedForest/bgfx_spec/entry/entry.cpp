@@ -5,7 +5,7 @@
 //  Created by Admin on 31.07.2021.
 //
 
-#include "event_queue.hpp"
+#include "events/event_queue.hpp"
 #include "input.hpp"
 #include "filesystem/fileio.hpp"
 #include "allocator/bxallocator.hpp"

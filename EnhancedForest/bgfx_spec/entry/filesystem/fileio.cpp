@@ -10,7 +10,7 @@
 #include <bx/filepath.h>
 #include <bx/string.h>
 
-#include "bxallocator.hpp"
+#include "../allocator/bxallocator.hpp"
 #include "fileio.hpp"
 
 static bx::FileReaderI *s_fileReader = NULL;

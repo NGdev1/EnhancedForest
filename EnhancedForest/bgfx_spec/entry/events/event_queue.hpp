@@ -7,9 +7,9 @@
 
 #pragma once
 
-#include "entry.hpp"
+#include "../entry.hpp"
 #include "events.hpp"
-#include "impl_at_platform.hpp"
+#include "../window/impl_at_platform.hpp"
 #include "../allocator/bxallocator.hpp"
 
 #include <bx/spscqueue.h>

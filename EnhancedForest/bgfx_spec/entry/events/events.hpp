@@ -7,8 +7,8 @@
 
 #pragma once
 
-#include "window.hpp"
-#include "base_enums.hpp"
+#include "../window/window.hpp"
+#include "../enums/base_enums.hpp"
 
 #include <bx/filepath.h>
 

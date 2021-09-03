@@ -1,6 +1,12 @@
 # Directories
+
+DataPreparation/Shaders/bin
+DataPreparation/Textures/out
+
+**cmake-build-debug
+**cmake-build-release
+
 **bin/
 **bin-int/
 
 .DS_Store
-UserInterfaceState.xcuserstate

@@ -8,7 +8,7 @@
 #pragma once
 
 #include "dbg.hpp"
-#include "base_enums.hpp"
+#include "enums/base_enums.hpp"
 #include "window/window.hpp"
 
 extern int startApp(int _argc, char **_argv);

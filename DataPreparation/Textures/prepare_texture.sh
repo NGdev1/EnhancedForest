@@ -1,1 +1,1 @@
-texturec -f arbuz.png -o arbuz1.png -t RGBA8
+texturec -f arbuz.png -o out/arbuz.png -t RGBA8

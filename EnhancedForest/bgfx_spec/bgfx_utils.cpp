@@ -19,10 +19,10 @@ namespace stl = tinystl;
 #include <meshoptimizer/src/meshoptimizer.h>
 #include <bimg/decode.h>
 
-#include "fileio.hpp"
-#include "bxallocator.hpp"
+#include "entry/filesystem/fileio.hpp"
+#include "entry/allocator/bxallocator.hpp"
 #include "bgfx_utils.hpp"
-#include "entry.hpp"
+#include "entry/entry.hpp"
 
 void *load(bx::FileReaderI *_reader, bx::AllocatorI *_allocator, const char *_filePath, uint32_t *_size) {
     if (bx::open(_reader, _filePath)) {

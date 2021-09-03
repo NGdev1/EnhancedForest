@@ -6,12 +6,13 @@
 //
 
 #include "bgfx_utils.hpp"
-#include "entry.hpp"
-#include "input.hpp"
+#include "entry/entry.hpp"
+#include "entry/input.hpp"
+#include "entry/window/impl_at_platform.hpp"
+
 #include "imgui/imgui.h"
-#include "CoreMesh.hpp"
-#include "Camera.hpp"
-#include "impl_at_platform.hpp"
+#include "Renderer/core/CoreMesh.hpp"
+#include "Renderer/core/Camera.hpp"
 
 #include <stdio.h>
 #include <bx/uint32_t.h>
@@ -54,7 +55,7 @@ public:
         , m_model(1.f)
         , m_camera(glm::vec3(0.f, 0.f, -25.f))
         , m_cameraSpeed(15.f)
-        , m_mouseSpeed(100.f)
+        , m_mouseSpeed(170.f)
         , m_rotationX(0.f)
         , m_rotationY(0.f) {}
 
@@ -151,13 +152,31 @@ public:
         // step 1: Time caclulations
         float deltaTime = float(bx::getHPCounter() - m_lastFrameTime) / float(bx::getHPFrequency());
         m_lastFrameTime = bx::getHPCounter();
-        float time = (float)((bx::getHPCounter() - m_programStartedTime) / double(bx::getHPFrequency()));
+        auto time = (float)(((double) bx::getHPCounter() - m_programStartedTime) / double(bx::getHPFrequency()));
 
         // step 2: input poll events
         m_lastMouseState = m_mouseState;
         entry::pollEvents(m_width, m_height, m_debug, m_reset, &m_mouseState);
 
-        // step 3: input process
+        // step 3: render frame
+         imguiBeginFrame(m_mouseState.m_mx, m_mouseState.m_my,
+             (m_mouseState.m_buttons[entry::MouseButton::Left] ? IMGUI_MBUT_LEFT : 0) |
+                 (m_mouseState.m_buttons[entry::MouseButton::Right] ? IMGUI_MBUT_RIGHT : 0) |
+                 (m_mouseState.m_buttons[entry::MouseButton::Middle] ? IMGUI_MBUT_MIDDLE : 0),
+             m_mouseState.m_mz, uint16_t(m_width), uint16_t(m_height));
+
+         showExampleDialog();
+
+         ImGui::SetNextWindowSize(ImVec2(100, 100), ImGuiCond_FirstUseEver);
+         ImGui::Begin("W1");
+         if (ImGui::Button("EXIT")) {
+             entry::setAppShouldClose();
+         }
+         ImGui::End();
+
+         imguiEndFrame();
+
+        // step 4: input process
         if (inputGetKeyState(entry::Key::KeyQ)) {
             entry::setAppShouldClose();
         }
@@ -174,32 +193,14 @@ public:
             m_camera.position += deltaTime * m_cameraSpeed * m_camera.right;
         }
 
-        if (m_mouseState.m_buttons[entry::MouseButton::Left]) {
-            float mouseDeltaX = m_mouseState.m_mx - m_lastMouseState.m_mx;
-            float mouseDeltaY = m_mouseState.m_my - m_lastMouseState.m_my;
+        if (ImGui::MouseOverArea() == false && m_mouseState.m_buttons[entry::MouseButton::Left]) {
+            float mouseDeltaX = (float) m_mouseState.m_mx - m_lastMouseState.m_mx;
+            float mouseDeltaY = (float) m_mouseState.m_my - m_lastMouseState.m_my;
             m_rotationX += (mouseDeltaY / m_height) * deltaTime * m_mouseSpeed;
-            m_rotationY -= (mouseDeltaX / m_width) * deltaTime * m_mouseSpeed;
+            m_rotationY += (mouseDeltaX / m_width) * deltaTime * m_mouseSpeed;
             m_camera.rotation = glm::mat4(1.f);
             m_camera.rotate(m_rotationX, m_rotationY, 0.f);
         }
-
-        // step 4: render frame
-        // imguiBeginFrame(m_mouseState.m_mx, m_mouseState.m_my,
-        //     (m_mouseState.m_buttons[entry::MouseButton::Left] ? IMGUI_MBUT_LEFT : 0) |
-        //         (m_mouseState.m_buttons[entry::MouseButton::Right] ? IMGUI_MBUT_RIGHT : 0) |
-        //         (m_mouseState.m_buttons[entry::MouseButton::Middle] ? IMGUI_MBUT_MIDDLE : 0),
-        //     m_mouseState.m_mz, uint16_t(m_width), uint16_t(m_height));
-        //
-        // showExampleDialog();
-        //
-        // ImGui::SetNextWindowSize(ImVec2(100, 100), ImGuiCond_FirstUseEver);
-        // ImGui::Begin("W1");
-        // if (ImGui::Button("EXIT")) {
-        //     entry::setAppShouldClose();
-        // }
-        // ImGui::End();
-        //
-        // imguiEndFrame();
 
         bgfx::touch(0);
         bx::mtxProj(&m_projectionMatrix[0][0], 60.0f, float(m_width) / float(m_height), 0.1f, 1000.0f, bgfx::getCaps()->homogeneousDepth);
