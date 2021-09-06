@@ -5,21 +5,18 @@
 //  Created by Admin on 31.07.2021.
 //
 
-#include "bgfx_utils.hpp"
-#include "entry/entry.hpp"
-#include "entry/input.hpp"
-#include "entry/window/impl_at_platform.hpp"
+#include "Entry/bgfx_utils.hpp"
+#include "Entry/entry.hpp"
+#include "Entry/input.hpp"
 
 #include "imgui/imgui.h"
 #include "Renderer/core/CoreMesh.hpp"
 #include "Renderer/core/Camera.hpp"
 
-#include <stdio.h>
-#include <bx/uint32_t.h>
+#include <cstdio>
 #include <bx/math.h>
 #include <bx/timer.h>
 #include <vector>
-#include <iostream>
 
 namespace ef {
 

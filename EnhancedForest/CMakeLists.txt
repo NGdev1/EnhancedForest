@@ -1,40 +1,49 @@
-project(Sandbox)
+project(EnhancedForest)
+
+include(cmake/add_app.cmake)
 
 set(CMAKE_CXX_STANDARD 14)
+
 file(GLOB_RECURSE SOURCES
         src/*.cpp
         src/*.mm
-        src/*.h
-        src/*.hpp
-        bgfx_spec/*.cpp
-        bgfx_spec/*.mm
-        bgfx_spec/*.h
-        bgfx_spec/*.hpp
         )
 
-# Storybrooke target
-add_executable(Sandbox ${SOURCES})
-target_include_directories(Sandbox PRIVATE ${PROJECT_SOURCE_DIR}/src)
-target_include_directories(Sandbox PRIVATE ${PROJECT_SOURCE_DIR}/bgfx_spec)
+file(GLOB_RECURSE INCLUDE
+        src/*.h
+        src/*.hpp
+        )
 
-set_target_properties(Sandbox
+file(GLOB RESOURCE_FOLDERS
+        Resources-common/*
+        Resources-pc/*
+        )
+list(FILTER RESOURCE_FOLDERS EXCLUDE REGEX "\\.DS_Store")
+
+# Storybrooke target
+
+add_app(EnhancedForest "${SOURCES}" "${INCLUDE}" "${RESOURCE_FOLDERS}")
+
+target_include_directories(EnhancedForest PRIVATE ${PROJECT_SOURCE_DIR}/src)
+
+set_target_properties(EnhancedForest
         PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY ${BIN_DIRECTORY}
         )
 
 # Dependencies - bgfx
-target_link_libraries(Sandbox bgfx)
-target_include_directories(Sandbox PRIVATE ${VENDOR_DIRECTORY}/bgfx/bgfx/include)
-target_include_directories(Sandbox PRIVATE ${VENDOR_DIRECTORY}/bgfx/bgfx/3rdparty)
-target_include_directories(Sandbox PRIVATE ${VENDOR_DIRECTORY}/bgfx/bimg/include)
-target_include_directories(Sandbox PRIVATE ${VENDOR_DIRECTORY}/bgfx/bx/include)
+target_link_libraries(EnhancedForest bgfx)
+target_include_directories(EnhancedForest PRIVATE ${VENDOR_DIRECTORY}/bgfx/bgfx/include)
+target_include_directories(EnhancedForest PRIVATE ${VENDOR_DIRECTORY}/bgfx/bgfx/3rdparty)
+target_include_directories(EnhancedForest PRIVATE ${VENDOR_DIRECTORY}/bgfx/bimg/include)
+target_include_directories(EnhancedForest PRIVATE ${VENDOR_DIRECTORY}/bgfx/bx/include)
 
 # Dependencies - meshoptimizer
-target_link_libraries(Sandbox meshoptimizer)
+target_link_libraries(EnhancedForest meshoptimizer)
 
 # Dependencies - dear-imgui
-target_link_libraries(Sandbox dear-imgui)
+target_link_libraries(EnhancedForest dear-imgui)
 
 # Dependencies - glm
-target_link_libraries(Sandbox glm)
-target_include_directories(Sandbox PRIVATE ${VENDOR_DIRECTORY}/glm)
+target_link_libraries(EnhancedForest glm)
+target_include_directories(EnhancedForest PRIVATE ${VENDOR_DIRECTORY}/glm)

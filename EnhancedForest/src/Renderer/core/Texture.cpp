@@ -6,7 +6,7 @@
 //
 
 #include "Texture.hpp"
-#include "bgfx_utils.hpp"
+#include "Entry/bgfx_utils.hpp"
 
 namespace ef {
 

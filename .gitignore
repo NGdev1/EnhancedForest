@@ -3,6 +3,9 @@
 DataPreparation/Shaders/bin
 DataPreparation/Textures/out
 
+xcode
+visualstudio
+
 **cmake-build-debug
 **cmake-build-release
 

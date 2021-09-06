@@ -8,7 +8,7 @@
 #include <iostream>
 
 #include "Texture.hpp"
-#include "bgfx_utils.hpp"
+#include "Entry/bgfx_utils.hpp"
 #include "Shader.hpp"
 
 namespace ef {

@@ -21,7 +21,7 @@ public:
 
     glm::vec3 position;
     glm::mat4 rotation;
-    Camera(glm::vec3 position);
+    explicit Camera(glm::vec3 position);
 
     void rotate(float x, float y, float z);
 
