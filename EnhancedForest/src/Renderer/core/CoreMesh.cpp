@@ -18,7 +18,10 @@ CoreMesh::CoreMesh(ef::Vertex *vertices, int verticesCount, uint16_t *indices, i
     , texture(texture)
     , shader(shader) {}
 
-CoreMesh::~CoreMesh() {}
+CoreMesh::~CoreMesh() {
+    delete texture;
+    delete shader;
+}
 
 void CoreMesh::draw() {
     shader->setTexture(0, "s_texColor", *texture);

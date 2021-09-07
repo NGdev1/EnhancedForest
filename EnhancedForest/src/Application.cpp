@@ -138,40 +138,38 @@ public:
 
     int shutdown() override {
         imguiDestroy();
-        delete m_baseShader;
-        delete m_grass1Texture;
         delete m_mesh;
         bgfx::shutdown();
         return 0;
     }
 
     void update() override {
-        // step 1: Time caclulations
+        // step 1: Time calculations
         float deltaTime = float(bx::getHPCounter() - m_lastFrameTime) / float(bx::getHPFrequency());
         m_lastFrameTime = bx::getHPCounter();
-        auto time = (float)(((double) bx::getHPCounter() - m_programStartedTime) / double(bx::getHPFrequency()));
+        auto time = (float) (((double) bx::getHPCounter() - m_programStartedTime) / double(bx::getHPFrequency()));
 
         // step 2: input poll events
         m_lastMouseState = m_mouseState;
         entry::pollEvents(m_width, m_height, m_debug, m_reset, &m_mouseState);
 
         // step 3: render frame
-         imguiBeginFrame(m_mouseState.m_mx, m_mouseState.m_my,
-             (m_mouseState.m_buttons[entry::MouseButton::Left] ? IMGUI_MBUT_LEFT : 0) |
-                 (m_mouseState.m_buttons[entry::MouseButton::Right] ? IMGUI_MBUT_RIGHT : 0) |
-                 (m_mouseState.m_buttons[entry::MouseButton::Middle] ? IMGUI_MBUT_MIDDLE : 0),
-             m_mouseState.m_mz, uint16_t(m_width), uint16_t(m_height));
+        imguiBeginFrame(m_mouseState.m_mx, m_mouseState.m_my,
+                        (m_mouseState.m_buttons[entry::MouseButton::Left] ? IMGUI_MBUT_LEFT : 0) |
+                        (m_mouseState.m_buttons[entry::MouseButton::Right] ? IMGUI_MBUT_RIGHT : 0) |
+                        (m_mouseState.m_buttons[entry::MouseButton::Middle] ? IMGUI_MBUT_MIDDLE : 0),
+                        m_mouseState.m_mz, uint16_t(m_width), uint16_t(m_height));
 
-         showExampleDialog();
+        showExampleDialog();
 
-         ImGui::SetNextWindowSize(ImVec2(100, 100), ImGuiCond_FirstUseEver);
-         ImGui::Begin("W1");
-         if (ImGui::Button("EXIT")) {
-             entry::setAppShouldClose();
-         }
-         ImGui::End();
+        ImGui::SetNextWindowSize(ImVec2(100, 100), ImGuiCond_FirstUseEver);
+        ImGui::Begin("W1");
+        if (ImGui::Button("EXIT")) {
+            entry::setAppShouldClose();
+        }
+        ImGui::End();
 
-         imguiEndFrame();
+        imguiEndFrame();
 
         // step 4: input process
         if (inputGetKeyState(entry::Key::KeyQ)) {
@@ -200,11 +198,12 @@ public:
         }
 
         bgfx::touch(0);
-        bx::mtxProj(&m_projectionMatrix[0][0], 60.0f, float(m_width) / float(m_height), 0.1f, 1000.0f, bgfx::getCaps()->homogeneousDepth);
+        bx::mtxProj(&m_projectionMatrix[0][0], 60.0f, float(m_width) / float(m_height), 0.1f, 1000.0f,
+                    bgfx::getCaps()->homogeneousDepth);
         bgfx::setViewRect(0, 0, 0, uint16_t(m_width), uint16_t(m_height));
         glm::mat4 view = m_camera.getView();
         bgfx::setViewTransform(0, &view[0][0], &m_projectionMatrix[0][0]);
-        bx::mtxRotateXY(&m_model[0][0], time, time);
+        // bx::mtxRotateXY(&m_model[0][0], time, time);
 
         bgfx::setTransform(&m_model[0][0]);
 
