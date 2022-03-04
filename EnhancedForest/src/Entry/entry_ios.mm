@@ -30,11 +30,11 @@ namespace entry
 	{
 		int m_argc;
 		const char* const* m_argv;
-
-		static int32_t threadFunc(bx::Thread* _thread, void* _userData);
 	};
 
 	static WindowHandle s_defaultWindow = { 0 };
+
+    int32_t threadFunc(bx::Thread* _thread, void* _userData);
 
 	struct Context
 	{
@@ -49,7 +49,7 @@ namespace entry
 			// Prevent render thread creation.
 			bgfx::renderFrame();
 
-			m_thread.init(MainThreadEntry::threadFunc, &m_mte);
+			m_thread.init(threadFunc, &m_mte);
 		}
 
 		~Context()
@@ -65,7 +65,7 @@ namespace entry
 
 	static Context* s_ctx;
 
-	int32_t MainThreadEntry::threadFunc(bx::Thread* _thread, void* _userData)
+	int32_t threadFunc(bx::Thread* _thread, void* _userData)
 	{
 		BX_UNUSED(_thread);
 
